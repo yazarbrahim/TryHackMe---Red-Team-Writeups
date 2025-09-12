@@ -2,7 +2,7 @@ Bolt Link: https://tryhackme.com/r/room/bolt
 
 Firstly we will start with golden searches because scanning takes a long time.  
 nmap -pn -p- -sC -sV (IP) -vvv -oA nmap_full  
-![7f8fd8d9db1636cb5773a3c615dca639.png](../../../_resources/7f8fd8d9db1636cb5773a3c615dca639.png)  
+![7f8fd8d9db1636cb5773a3c615dca639.png](resources/7f8fd8d9db1636cb5773a3c615dca639.png)  
 with nmap scan. Nmap shows us three ports are open, we don’t any information about ssh, let’s focus on http
 
 Basic Directory Scan, gobuster  
@@ -17,44 +17,44 @@ connected to the network.
 
 Access the website, and we get it.
 
-![d86ec8633640c5434960dde97b7c24a0.png](../../../_resources/d86ec8633640c5434960dde97b7c24a0.png)
+![d86ec8633640c5434960dde97b7c24a0.png](resources/d86ec8633640c5434960dde97b7c24a0.png)
 
 let’s explore this website, in the first article we get interesting information, where we get the username.  
-![7a04e64f25934c5b44f4b7347e287e63.png](../../../_resources/7a04e64f25934c5b44f4b7347e287e63.png)
+![7a04e64f25934c5b44f4b7347e287e63.png](resources/7a04e64f25934c5b44f4b7347e287e63.png)
 
 The second article shows that we get the password to log in.
 
-![445c5380bdd3d7c1a7cdde7e02182b2c.png](../../../_resources/445c5380bdd3d7c1a7cdde7e02182b2c.png)
+![445c5380bdd3d7c1a7cdde7e02182b2c.png](resources/445c5380bdd3d7c1a7cdde7e02182b2c.png)
 
 Username: bolt  
 Password: boltadmin123
 
 I tried to search on Google for the Bolt CMS default login page address.
 
-![fe77bbddd071e948a5fda5849ff37d9a.png](../../../_resources/fe77bbddd071e948a5fda5849ff37d9a.png)
+![fe77bbddd071e948a5fda5849ff37d9a.png](resources/fe77bbddd071e948a5fda5849ff37d9a.png)
 
 let’s try to access the login page using the username and password that we got earlier.
 
-<img alt="" class="bh ko mr c jop-noMdConv" width="700" height="357" loading="lazy" role="presentation" src="../../../_resources/1_fVUJkSUJOoWHPBvq6fCYgg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+<img alt="" class="bh ko mr c jop-noMdConv" width="700" height="357" loading="lazy" role="presentation" src="resources/1_fVUJkSUJOoWHPBvq6fCYgg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 yeah, we’re in :) on the web dashboard we get information about the CMS version of this website.
 
-![86a1ac424936a10bb73d37162145929b.png](../../../_resources/86a1ac424936a10bb73d37162145929b.png)
+![86a1ac424936a10bb73d37162145929b.png](resources/86a1ac424936a10bb73d37162145929b.png)
 
 > What version of the CMS is installed on the server? (Ex: Name 1.1.1)
 > 
 > Answer : Bolt 3.7.1
 > 
-> ![583ad5a03ad1b11fd787dc5a8494aa34.png](../../../_resources/583ad5a03ad1b11fd787dc5a8494aa34.png)
+> ![583ad5a03ad1b11fd787dc5a8494aa34.png](resources/583ad5a03ad1b11fd787dc5a8494aa34.png)
 
-![bdcb15c1c273db3e5898fcaf815210c1.png](../../../_resources/bdcb15c1c273db3e5898fcaf815210c1.png)
+![bdcb15c1c273db3e5898fcaf815210c1.png](resources/bdcb15c1c273db3e5898fcaf815210c1.png)
 
 Look for vulnerabilities in this version of the CMS, and it looks like there are vulnerabilities there.  
-![adb5a3e4c65f9159c50d9bdcd37448f8.png](../../../_resources/adb5a3e4c65f9159c50d9bdcd37448f8.png)
+![adb5a3e4c65f9159c50d9bdcd37448f8.png](resources/adb5a3e4c65f9159c50d9bdcd37448f8.png)
 
-![add65453ed9ee01750314246f56c15f7.png](../../../_resources/add65453ed9ee01750314246f56c15f7.png)
+![add65453ed9ee01750314246f56c15f7.png](resources/add65453ed9ee01750314246f56c15f7.png)
 
-![4bab98752da3486ad6bee25ba2fca4d2.png](../../../_resources/4bab98752da3486ad6bee25ba2fca4d2.png)
+![4bab98752da3486ad6bee25ba2fca4d2.png](resources/4bab98752da3486ad6bee25ba2fca4d2.png)
 
 > There’s an exploit for a previous version of this CMS, which allows authenticated RCE. Find it on Exploit DB. What’s its EDB-ID?
 > 
@@ -72,19 +72,19 @@ let’s try using msfconsole, and look for a module that matches the vulnerabili
 
 just type search bolt --> this command is going to find all macthing bolt exploits.
 
-![75389091e54cd2c174064bc314079858.png](../../../_resources/75389091e54cd2c174064bc314079858.png)
+![75389091e54cd2c174064bc314079858.png](resources/75389091e54cd2c174064bc314079858.png)
 
 Use the module, and it can be seen that we need a username, password, rhost, and rhost to run this exploit  
-![711ae2814373e11b3c88736ad0c21d38.png](../../../_resources/711ae2814373e11b3c88736ad0c21d38.png)
+![711ae2814373e11b3c88736ad0c21d38.png](resources/711ae2814373e11b3c88736ad0c21d38.png)
 
 Set username, password, rhost, and rhost with existing information.  
-![6477ac5377a349d149d24041775f9076.png](../../../_resources/6477ac5377a349d149d24041775f9076.png)
+![6477ac5377a349d149d24041775f9076.png](resources/6477ac5377a349d149d24041775f9076.png)
 
-![183e74dfa3074990213c88ab2bde2297.png](../../../_resources/183e74dfa3074990213c88ab2bde2297.png)
+![183e74dfa3074990213c88ab2bde2297.png](resources/183e74dfa3074990213c88ab2bde2297.png)
 
 Run the exploit, and boommm. we’re in :)
 
-![d1517757897ff35ed31065d4e1d0f389.png](../../../_resources/d1517757897ff35ed31065d4e1d0f389.png)
+![d1517757897ff35ed31065d4e1d0f389.png](resources/d1517757897ff35ed31065d4e1d0f389.png)
 
 Try to see the account that we got, and we have got root access :)
 
@@ -92,7 +92,7 @@ Look for the flag in the machine, and we get it.
 
 1.  way
 
-![e388e707a08ef09dbce8edfe78e1cae3.png](../../../_resources/e388e707a08ef09dbce8edfe78e1cae3.png)
+![e388e707a08ef09dbce8edfe78e1cae3.png](resources/e388e707a08ef09dbce8edfe78e1cae3.png)
 
 > Look for flag.txt inside the machine.
 > 
@@ -100,7 +100,7 @@ Look for the flag in the machine, and we get it.
 
 second way
 
-![37aaa9ac772c1164ee9d824a48d6452e.png](../../../_resources/37aaa9ac772c1164ee9d824a48d6452e.png)
+![37aaa9ac772c1164ee9d824a48d6452e.png](resources/37aaa9ac772c1164ee9d824a48d6452e.png)
 
 # Conslusion:
 
