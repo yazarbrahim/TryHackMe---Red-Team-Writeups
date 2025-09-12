@@ -14,7 +14,7 @@ nmap -A 10.10.46.2
 
 &nbsp;nmap --script=vuln 10.10.46.2
 
-![76b33048bba8c009c9e795f3e8669f2f.png](../../../_resources/76b33048bba8c009c9e795f3e8669f2f.png)
+![76b33048bba8c009c9e795f3e8669f2f.png](resources/76b33048bba8c009c9e795f3e8669f2f.png)
 
 **Task 2 Gain Access:**
 
@@ -24,15 +24,15 @@ Start [Metasploit -](https://tryhackme.com/module/metasploit)
 
 **Q1: Find the exploitation code we will run against the machine. What is the full path of the code?** (Ex: exploit/........)
 
-![0c021fa5c865c08d4cdc8f3a472e5415.png](../../../_resources/0c021fa5c865c08d4cdc8f3a472e5415.png)
+![0c021fa5c865c08d4cdc8f3a472e5415.png]( resources/0c021fa5c865c08d4cdc8f3a472e5415.png)
 
 **Q2: Show options and set the one required value. What is the name of this value?** (All caps for submission)
 
-![2238a19ef523ca493b3993e018f15e8a.png](../../../_resources/2238a19ef523ca493b3993e018f15e8a.png)
+![2238a19ef523ca493b3993e018f15e8a.png]( resources/2238a19ef523ca493b3993e018f15e8a.png)
 
-![282ea7f7b9138891771b52d3165f5a99.png](../../../_resources/282ea7f7b9138891771b52d3165f5a99.png)
+![282ea7f7b9138891771b52d3165f5a99.png]( resources/282ea7f7b9138891771b52d3165f5a99.png)
 
-![6e5b0eb5dde0122d3a29a47343540cf2.png](../../../_resources/6e5b0eb5dde0122d3a29a47343540cf2.png)
+![6e5b0eb5dde0122d3a29a47343540cf2.png]( resources/6e5b0eb5dde0122d3a29a47343540cf2.png)
 
 **Q3: Usually it would be fine to run this exploit as is; however, for the sake of learning, you should do one more thing before exploiting the target. Enter the following command and press enter:**
 
@@ -40,7 +40,7 @@ Start [Metasploit -](https://tryhackme.com/module/metasploit)
 
 With that done, run the exploit!
 
-![d73cf8102c78daefc5584fd65f3a8cc2.png](../../../_resources/d73cf8102c78daefc5584fd65f3a8cc2.png)
+![d73cf8102c78daefc5584fd65f3a8cc2.png]( resources/d73cf8102c78daefc5584fd65f3a8cc2.png)
 
 &nbsp;
 
@@ -52,25 +52,25 @@ Escalate privileges, learn how to upgrade shells in <span style="color: inherit;
 
 If you haven't already, background the previously gained shell (CTRL + Z). Research online how to convert a shell to Meterpreter shell in Metasploit. What is the name of the post module we will use?
 
-![9b05b20d2eae0ebc45d4f2e07d140543.png](../../../_resources/9b05b20d2eae0ebc45d4f2e07d140543.png)
+![9b05b20d2eae0ebc45d4f2e07d140543.png]( resources/9b05b20d2eae0ebc45d4f2e07d140543.png)
 
 &nbsp;
 
-![a50e30d30a97b316fa85fa798651e8e4.png](../../../_resources/a50e30d30a97b316fa85fa798651e8e4.png)
+![a50e30d30a97b316fa85fa798651e8e4.png]( resources/a50e30d30a97b316fa85fa798651e8e4.png)
 
 &nbsp;
 
-![0cd22c65fa6fb16617975159a26276ed.png](../../../_resources/0cd22c65fa6fb16617975159a26276ed.png)
+![0cd22c65fa6fb16617975159a26276ed.png]( resources/0cd22c65fa6fb16617975159a26276ed.png)
 
 &nbsp;
 
 Select this (use MODULE_PATH). Show options, what option are we required to change?
 
-![9db2c06f5a67cf2cfb20e2b06dc5fd75.png](../../../_resources/9db2c06f5a67cf2cfb20e2b06dc5fd75.png)
+![9db2c06f5a67cf2cfb20e2b06dc5fd75.png]( resources/9db2c06f5a67cf2cfb20e2b06dc5fd75.png)
 
 Set the required option, you may need to list all of the sessions to find your target here.
 
-![eaa30e575bbe8d88b1b866b7f0014088.png](../../../_resources/eaa30e575bbe8d88b1b866b7f0014088.png)
+![eaa30e575bbe8d88b1b866b7f0014088.png]( resources/eaa30e575bbe8d88b1b866b7f0014088.png)
 
 Run! If this doesn't work, try completing the exploit from the previous task once more.
 
