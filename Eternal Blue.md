@@ -6,7 +6,7 @@
 
 nmap -A 10.10.46.2
 
-![0612282d916ec4f0904797ac1da9ea32.png](../../../_resources/0612282d916ec4f0904797ac1da9ea32.png)
+![0612282d916ec4f0904797ac1da9ea32.png](resources/0612282d916ec4f0904797ac1da9ea32.png)
 
 &nbsp;
 
