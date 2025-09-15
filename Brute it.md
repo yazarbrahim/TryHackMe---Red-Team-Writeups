@@ -20,7 +20,7 @@ nmap -A -T4 -O -p- 10.10.145.133
 
 **\-p- :** You can specify **“-p-”** to scan ports from 1 through 65535. ( We have to search all ports because question is asking total of open ports )
 
-![2c42909e1c50489ab51c4d15bc8c73e5.png](../../../_resources/2c42909e1c50489ab51c4d15bc8c73e5.png)
+![2c42909e1c50489ab51c4d15bc8c73e5.png](resources/2c42909e1c50489ab51c4d15bc8c73e5.png)
 
 **Q2: What version of SSH is running?**
 
@@ -36,17 +36,17 @@ nmap -A -T4 -O -p- 10.10.145.133
 
 <span style="color: #151c2b;">Ubuntu</span>
 
-<span style="color: #151c2b;">![a4349e6fac6e4d388cce9e9d1e6c20cd.png](../../../_resources/a4349e6fac6e4d388cce9e9d1e6c20cd.png)</span>
+<span style="color: #151c2b;">![a4349e6fac6e4d388cce9e9d1e6c20cd.png](resources/a4349e6fac6e4d388cce9e9d1e6c20cd.png)</span>
 
 **<span style="color: #151c2b;">Q5: <span style="color: #151c2b;">Search for hidden directories on web server.</span> <span style="color: #151c2b;">What is the hidden directory?</span></span>**
 
 <span style="color: #151c2b;"><span style="color: #151c2b;">/admin</span></span>
 
-<span style="color: #151c2b;"><span style="color: #151c2b;">![91ba7954460d1ae36fd91a4d9fb9e56f.png](../../../_resources/91ba7954460d1ae36fd91a4d9fb9e56f.png)</span></span>
+<span style="color: #151c2b;"><span style="color: #151c2b;">![91ba7954460d1ae36fd91a4d9fb9e56f.png](resources/91ba7954460d1ae36fd91a4d9fb9e56f.png)</span></span>
 
 &nbsp;
 
-![f3c6ad1ed04e6eedfb772f1e7255b705.png](../../../_resources/f3c6ad1ed04e6eedfb772f1e7255b705.png)
+![f3c6ad1ed04e6eedfb772f1e7255b705.png](resources/f3c6ad1ed04e6eedfb772f1e7255b705.png)
 
 &nbsp;
 
@@ -62,7 +62,7 @@ nmap -A -T4 -O -p- 10.10.145.133
 
 <span style="color: #151c2b;">\--> We know the username in page source</span>
 
-<span style="color: #151c2b;">![b36d544909d9612441ec6109bed27878.png](../../../_resources/b36d544909d9612441ec6109bed27878.png)</span>
+<span style="color: #151c2b;">![b36d544909d9612441ec6109bed27878.png](resources/b36d544909d9612441ec6109bed27878.png)</span>
 
 <span style="color: #151c2b;">\--> We need to hydra to find password</span>
 
@@ -70,13 +70,13 @@ hydra -l admin -P /root/Desktop/wordlists/rockyou.txt .....ip...  http-post-for
 
 When we try the default username and password, we get the following error message. You’re right, it can’t be that easy.
 
-<img alt="" class="bg lm nr c jop-noMdConv" width="500" height="354" loading="eager" role="presentation" src="../../../_resources/1_us_-CXpuDNrfW6xSgRU1ww.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 500px; max-width: 100%; height: auto;">
+<img alt="" class="bg lm nr c jop-noMdConv" width="500" height="354" loading="eager" role="presentation" src="resources/1_us_-CXpuDNrfW6xSgRU1ww.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 500px; max-width: 100%; height: auto;">
 
 **/admin**
 
 By looking at the request, we can see that the website is using the **POST** method to login.
 
-<img alt="" class="bg lm nr c jop-noMdConv" width="700" height="284" loading="lazy" role="presentation" src="../../../_resources/1_-QnksapAJ-AROW_5ADgRiQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+<img alt="" class="bg lm nr c jop-noMdConv" width="700" height="284" loading="lazy" role="presentation" src="resources/1_-QnksapAJ-AROW_5ADgRiQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 **Inspect / Network**
 
@@ -84,7 +84,7 @@ By looking at the request, we can see that the website is using the **POST** met
 
 We see a section called **Request payload** that contains the username and password we entered. We need all of this request for Hydra to use.
 
-<img alt="" class="bg lm nr c jop-noMdConv" width="547" height="307" loading="lazy" role="presentation" src="../../../_resources/1_BVAY7aojXT3o99CbDJ3YSQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 547px; max-width: 100%; height: auto;">
+<img alt="" class="bg lm nr c jop-noMdConv" width="547" height="307" loading="lazy" role="presentation" src="resources/1_BVAY7aojXT3o99CbDJ3YSQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 547px; max-width: 100%; height: auto;">
 
 **Request**
 
@@ -104,7 +104,7 @@ hydra -l <Login_Name> -P <wordlist> 10.10.145.133 http-post-form '/admin/:user=^
 
 **\[machine IP\]:** the IP address of the target machine
 
-![c3686205eb250c05e267d07738ab95e7.png](../../../_resources/c3686205eb250c05e267d07738ab95e7.png)
+![c3686205eb250c05e267d07738ab95e7.png](resources/c3686205eb250c05e267d07738ab95e7.png)
 
 &nbsp;
 
@@ -112,13 +112,13 @@ hydra -l <Login_Name> -P <wordlist> 10.10.145.133 http-post-form '/admin/:user=^
 
 Do you remember which ports are open as a result of the nmap scan? When we looked at the nmap scan result, we found that the **SSH** service was running on port **22**. Maybe we can use the private key for ssh connection.
 
-<img alt="" class="bg lm nr c jop-noMdConv" width="700" height="218" loading="lazy" role="presentation" src="../../../_resources/1_8iy1AR83wWX6d1o35TWWQQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+<img alt="" class="bg lm nr c jop-noMdConv" width="700" height="218" loading="lazy" role="presentation" src="resources/1_8iy1AR83wWX6d1o35TWWQQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 **RSA Private Key**
 
 **RSA key** is a private key based on RSA algorithm. Private Key is used for authentication and a symmetric key exchange.
 
-<img alt="" class="bg lm nr c jop-noMdConv" width="627" height="640" loading="lazy" role="presentation" src="../../../_resources/1_anSrG8HbkgCY8OvBHdFaMw.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 627px; max-width: 100%; height: auto;">
+<img alt="" class="bg lm nr c jop-noMdConv" width="627" height="640" loading="lazy" role="presentation" src="resources/1_anSrG8HbkgCY8OvBHdFaMw.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 627px; max-width: 100%; height: auto;">
 
 **id_rsa**
 
@@ -126,9 +126,9 @@ We can use the **wget** command to download the key to our machine. <span style=
 
 **Wget** is a command-line utility for downloading files from the web.
 
-<img alt="" class="bg lm nr c jop-noMdConv" width="662" height="199" loading="lazy" role="presentation" src="../../../_resources/1_UIGrir5IQ2a9jGioB_yZTg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 662px; max-width: 100%; height: auto;">
+<img alt="" class="bg lm nr c jop-noMdConv" width="662" height="199" loading="lazy" role="presentation" src="resources/1_UIGrir5IQ2a9jGioB_yZTg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 662px; max-width: 100%; height: auto;">
 
-**![3ab6a22dbda958dc657cb038f7fdaa10.png](../../../_resources/3ab6a22dbda958dc657cb038f7fdaa10.png)**
+**![3ab6a22dbda958dc657cb038f7fdaa10.png](resources/3ab6a22dbda958dc657cb038f7fdaa10.png)**
 
 **wget**
 
@@ -136,9 +136,9 @@ We can use the special John the Ripper tool called **ssh2john.py** which can ext
 
 **Ssh2john** is part of John the Reaper suite. This is a script that basically transforms \[RSA/DSA/EC/OPENSSH (SSH private keys)\] private key to john format for later cracking using JtR.
 
-![7a4af0e292fba413547c525ad777d013.png](../../../_resources/7a4af0e292fba413547c525ad777d013.png)
+![7a4af0e292fba413547c525ad777d013.png](resources/7a4af0e292fba413547c525ad777d013.png)
 
-![5ab45069d0b78577c2be7a8d587411c2.png](../../../_resources/5ab45069d0b78577c2be7a8d587411c2.png)
+![5ab45069d0b78577c2be7a8d587411c2.png](resources/5ab45069d0b78577c2be7a8d587411c2.png)
 
 **ssh2john**
 
@@ -146,7 +146,7 @@ Now we can use **John the Ripper** to crack this hash and extract the SSH privat
 
 **John the Ripper** is a popular open source password cracking tool that combines several different cracking programs and runs in both brute force and dictionary attack modes.
 
-![d11daf0a13d928f3835845b6a6cc58f6.png](../../../_resources/d11daf0a13d928f3835845b6a6cc58f6.png)
+![d11daf0a13d928f3835845b6a6cc58f6.png](resources/d11daf0a13d928f3835845b6a6cc58f6.png)
 
 **John the Ripper**
 
@@ -175,13 +175,13 @@ An SSH private key file like `id_rsa` needs to be kept private and secure. If th
 
 By setting permissions to `600`, only the file owner can read or modify `id_rsa`, ensuring it remains private.
 
-![fbdcc01c7cb969f824a51c769a67bba0.png](../../../_resources/fbdcc01c7cb969f824a51c769a67bba0.png)
+![fbdcc01c7cb969f824a51c769a67bba0.png](resources/fbdcc01c7cb969f824a51c769a67bba0.png)
 
-![1cd4e85b4e6f0302a4eaa04fd3ef89e2.png](../../../_resources/1cd4e85b4e6f0302a4eaa04fd3ef89e2.png)
+![1cd4e85b4e6f0302a4eaa04fd3ef89e2.png](resources/1cd4e85b4e6f0302a4eaa04fd3ef89e2.png)
 
 **Q4:** Web flag
 
-**<img alt="" class="bg lm nr c jop-noMdConv" width="700" height="218" loading="lazy" role="presentation" src="../../../_resources/1_ndq2f-4XnD-348rSCma1Yg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">**
+**<img alt="" class="bg lm nr c jop-noMdConv" width="700" height="218" loading="lazy" role="presentation" src="resources/1_ndq2f-4XnD-348rSCma1Yg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">**
 
 &nbsp;
 
@@ -197,13 +197,13 @@ Sudo (Super User DO) command in Linux is generally used as a prefix of some comm
 
 sudo -l : The -l (list) option will print out the commands allowed (and forbidden) the user on the current host.
 
-### <img alt="" class="bg lm nr c jop-noMdConv" width="700" height="167" loading="eager" role="presentation" src="../../../_resources/1_SQCA7-eL69J9AioHBE97dw.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+### <img alt="" class="bg lm nr c jop-noMdConv" width="700" height="167" loading="eager" role="presentation" src="resources/1_SQCA7-eL69J9AioHBE97dw.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 ### **/bin/cat**
 
 ### Google search time!
 
-### <img alt="" class="bg lm nr c jop-noMdConv" width="700" height="272" loading="lazy" role="presentation" src="../../../_resources/1__HhRKAHG02JOAWgFQZINqQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+### <img alt="" class="bg lm nr c jop-noMdConv" width="700" height="272" loading="lazy" role="presentation" src="resources/1__HhRKAHG02JOAWgFQZINqQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 ### **GTFOBins**
 
@@ -211,7 +211,7 @@ sudo -l : The -l (list) option will print out the commands allowed (and forbidde
 
 <ins>**https://gtfobins.github.io/gtfobins/cat/#sudo**</ins>
 
-### <img alt="" class="bg lm nr c jop-noMdConv" width="700" height="175" loading="lazy" role="presentation" src="../../../_resources/1_JGCjUtupf3uaD-O7dx1WmA.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+### <img alt="" class="bg lm nr c jop-noMdConv" width="700" height="175" loading="lazy" role="presentation" src="resources/1_JGCjUtupf3uaD-O7dx1WmA.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 ### **<span style="color: #242424;">According to GTFOBins, we can use this binary to read files on the system, and since we can run this as root, we can read any file on the system!</span>**
 
@@ -221,17 +221,17 @@ sudo -l : The -l (list) option will print out the commands allowed (and forbidde
 - Normally, only the root user can read this file because it contains sensitive authentication data.
 - If `sudo` allows you to read it, you can potentially crack the hashed passwords using **John the Ripper** or **Hashcat**.
 
-![48e4e5764d14b5bef268f9b398cd88d8.png](../../../_resources/48e4e5764d14b5bef268f9b398cd88d8.png)
+![48e4e5764d14b5bef268f9b398cd88d8.png](resources/48e4e5764d14b5bef268f9b398cd88d8.png)
 
-### <img alt="" class="bg lm nr c jop-noMdConv" width="700" height="303" loading="lazy" role="presentation" src="../../../_resources/1_YGh8ZahlO1PdHVro3qTv9w.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+### <img alt="" class="bg lm nr c jop-noMdConv" width="700" height="303" loading="lazy" role="presentation" src="resources/1_YGh8ZahlO1PdHVro3qTv9w.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
-### **![ec379ba10c2d573cd470430829b53079.png](../../../_resources/ec379ba10c2d573cd470430829b53079.png)**
+### **![ec379ba10c2d573cd470430829b53079.png](resources/ec379ba10c2d573cd470430829b53079.png)**
 
 ### **/etc/shadow**
 
 ### This time we can crack the root user’s hash using john the ripper.
 
-### ![7dfdab11ee854aa175f76cac5dd95127.png](../../../_resources/7dfdab11ee854aa175f76cac5dd95127.png)
+### ![7dfdab11ee854aa175f76cac5dd95127.png](resources/7dfdab11ee854aa175f76cac5dd95127.png)
 
 ### **Q2:** root.txt
 
@@ -260,7 +260,7 @@ This is often considered safer because it limits the duration and scope of root 
 
 ### **su** is an acronym for **switch user** or **substitute user**. You are basically switching to a particular user and you need the password for the user you are switching to. Most often, the user account you switch to is the root account but it can be any account on the system.
 
-### <img alt="" class="bg lm nr c jop-noMdConv" width="579" height="204" loading="lazy" role="presentation" src="../../../_resources/1_7wzSdbGfw8qybbNElZq_dg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 579px; max-width: 100%; height: auto;">
+### <img alt="" class="bg lm nr c jop-noMdConv" width="579" height="204" loading="lazy" role="presentation" src="resources/1_7wzSdbGfw8qybbNElZq_dg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 579px; max-width: 100%; height: auto;">
 
 ### **root.txt**
 
