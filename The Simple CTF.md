@@ -8,7 +8,7 @@ Let’s kick off the room with a scan I do on every room, nmap.
 
 nmap -p- -sC -sV 10.10.186.250 -vvv -oA nmap_ful --
 
-![b75780ba4f235c2b7c461d4d26d346f5.png](../../../_resources/b75780ba4f235c2b7c461d4d26d346f5.png)
+![b75780ba4f235c2b7c461d4d26d346f5.png](resources/b75780ba4f235c2b7c461d4d26d346f5.png)
 
 From our results, we can see ports 21 (FTP), 80 (HTTP), and 2222 (SSH) are open.
 
@@ -18,13 +18,13 @@ nmap -sV -p 1-1000 10.10.286.250
 
 nmap -sV --top-ports 1000 10.10.186.250
 
-![7a9f9ee107a73341052fdeb76c947117.png](../../../_resources/7a9f9ee107a73341052fdeb76c947117.png)
+![7a9f9ee107a73341052fdeb76c947117.png](resources/7a9f9ee107a73341052fdeb76c947117.png)
 
 **Answer:** 2
 
 ***Q: What is running on the higher port?***
 
-***![4714d6d737fbded2d8bec18b0b6b3d70.png](../../../_resources/4714d6d737fbded2d8bec18b0b6b3d70.png)***
+***![4714d6d737fbded2d8bec18b0b6b3d70.png](resources/4714d6d737fbded2d8bec18b0b6b3d70.png)***
 
 **Answer**: SSH
 
@@ -34,7 +34,7 @@ Knowing there is a website being hosted let’s check it out for any additional 
 
 First, let’s just browse to the IP and see what we get.
 
-![3643eea7fd7d3b4bd5fbc221753eb2d1.png](../../../_resources/3643eea7fd7d3b4bd5fbc221753eb2d1.png)
+![3643eea7fd7d3b4bd5fbc221753eb2d1.png](resources/3643eea7fd7d3b4bd5fbc221753eb2d1.png)
 
 Webpage port 80
 
@@ -44,15 +44,15 @@ Next, we can use “gobuster” to scan the website for any additional pages.
 
 or dirb
 
-![74701ff48327630f7a9160f77aadb552.png](../../../_resources/74701ff48327630f7a9160f77aadb552.png)
+![74701ff48327630f7a9160f77aadb552.png](resources/74701ff48327630f7a9160f77aadb552.png)
 
-<img alt="" class="bh kp lu c jop-noMdConv" width="700" height="278" loading="lazy" role="presentation" src="../../../_resources/1_Q5zqBviyuk2OOReYTIb92Q.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+<img alt="" class="bh kp lu c jop-noMdConv" width="700" height="278" loading="lazy" role="presentation" src="resources/1_Q5zqBviyuk2OOReYTIb92Q.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 “gobuster” results
 
 Using the medium wordlist we supplied, gobuster was able to find there is a webpage at “/simple”. Let’s try browsing to it now and see what we find.
 
-<img alt="" class="bh kp lu c jop-noMdConv" width="700" height="713" loading="lazy" role="presentation" src="../../../_resources/1_D7QFRNYA1sV0Ak3nwn2jRQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+<img alt="" class="bh kp lu c jop-noMdConv" width="700" height="713" loading="lazy" role="presentation" src="resources/1_D7QFRNYA1sV0Ak3nwn2jRQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 /simple webpage
 
@@ -62,7 +62,7 @@ Let’s see if there is anything online about this particular version by simply 
 
 In our results, we see a page on Exploit-DB that matches our search and refers to a SQL injection attack utilizing CVE-2019–9053.
 
-<img alt="" class="bh kp lu c jop-noMdConv" width="700" height="388" loading="lazy" role="presentation" src="../../../_resources/1_MJo7Ktvlh4uMdVxdqLeJ3Q.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+<img alt="" class="bh kp lu c jop-noMdConv" width="700" height="388" loading="lazy" role="presentation" src="resources/1_MJo7Ktvlh4uMdVxdqLeJ3Q.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 Exploit-DB
 
@@ -95,7 +95,7 @@ This vulnerability is generally exploited via an authenticated phpMyAdmin user. 
 
 ***Q: To what kind of vulnerability is the application vulnerable?***
 
-***![d0626436684e09413a6dca91dd0d4cd2.png](../../../_resources/d0626436684e09413a6dca91dd0d4cd2.png)***
+***![d0626436684e09413a6dca91dd0d4cd2.png](resources/d0626436684e09413a6dca91dd0d4cd2.png)***
 
 **Answer:** SQLi
 
@@ -107,13 +107,13 @@ This vulnerability is generally exploited via an authenticated phpMyAdmin user. 
 
 ***wget*** <ins>***https://www.exploit-db.com/download/46635***</ins>
 
-![1558106a119c153f2f358d42c6b19821.png](../../../_resources/1558106a119c153f2f358d42c6b19821.png)
+![1558106a119c153f2f358d42c6b19821.png](resources/1558106a119c153f2f358d42c6b19821.png)
 
 <span style="color: #6b6b6b;">Trying to run the exploit.py script</span>
 
 python3 46635.py
 
-![74d1d3679a9a95e0964d13a420005ce2.png](../../../_resources/74d1d3679a9a95e0964d13a420005ce2.png)
+![74d1d3679a9a95e0964d13a420005ce2.png](resources/74d1d3679a9a95e0964d13a420005ce2.png)
 
 it did not work we need to convert python2 code python3 you can use AI
 
@@ -125,17 +125,17 @@ Exploit options
 
 Here we can see we need to supply a URL using the -u flag and can supply a wordlist for password cracking using — crack -w.
 
-<img alt="" class="bh kp lu c jop-noMdConv" width="700" height="41" loading="lazy" role="presentation" src="../../../_resources/1_vcwsWYmuEz4GxrsHhMGYsg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+<img alt="" class="bh kp lu c jop-noMdConv" width="700" height="41" loading="lazy" role="presentation" src="resources/1_vcwsWYmuEz4GxrsHhMGYsg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 Exploit syntax
 
 Now, let’s run it and see what we get in return.
 
-![ac29bb7d32a4eee26cbe587d12bfe5ab.png](../../../_resources/ac29bb7d32a4eee26cbe587d12bfe5ab.png)
+![ac29bb7d32a4eee26cbe587d12bfe5ab.png](resources/ac29bb7d32a4eee26cbe587d12bfe5ab.png)
 
 *(Note: Initially the script would not run due to my machine not having “termcolor” module installed for Python. To fix:* `pip install termcolor`*)*
 
-![ff0cd918a78e28deea4ed4f86d45514a.png](../../../_resources/ff0cd918a78e28deea4ed4f86d45514a.png)
+![ff0cd918a78e28deea4ed4f86d45514a.png](resources/ff0cd918a78e28deea4ed4f86d45514a.png)
 
 Exploit results
 
@@ -148,25 +148,25 @@ we got username and hash password we can crack this hash with hashcat
 
 hash-identifier
 
-![cc829f8ba0dd372caa54a42b3236ba76.png](../../../_resources/cc829f8ba0dd372caa54a42b3236ba76.png)
+![cc829f8ba0dd372caa54a42b3236ba76.png](resources/cc829f8ba0dd372caa54a42b3236ba76.png)
 
 find hash code ; https://hashcat.net/wiki/doku.php?id=example_hashes
 
 &nbsp;
 
-![4a11e20bb198b54f8e0e0b49380d01f4.png](../../../_resources/4a11e20bb198b54f8e0e0b49380d01f4.png)
+![4a11e20bb198b54f8e0e0b49380d01f4.png](resources/4a11e20bb198b54f8e0e0b49380d01f4.png)
 
 &nbsp;now hashcat -m 20 0c01f4468bd75d7a84c7eb73846e8d96:1dac0d92e9fa6bb2 -w '/home/kali/Desktop/rockyou.txt'
 
 hashcat -m 20 0c01f4468bd75d7a84c7eb73846e8d96:1dac0d92e9fa6bb2 '/home/kali/Desktop/rockyou.txt'
 
-![c1175f0a0bba170367428be0304c5575.png](../../../_resources/c1175f0a0bba170367428be0304c5575.png)
+![c1175f0a0bba170367428be0304c5575.png](resources/c1175f0a0bba170367428be0304c5575.png)
 
 Bingo! We got a username and a cracked password returned from the exploit.
 
 Second way --> just do Hydra
 
-![814a2b82edb7db599ab94675466faca6.png](../../../_resources/814a2b82edb7db599ab94675466faca6.png)
+![814a2b82edb7db599ab94675466faca6.png](resources/814a2b82edb7db599ab94675466faca6.png)
 
 ***Q; What’s the password?***
 
@@ -182,7 +182,7 @@ Username found: mitch
 
 password: secret
 
-![abedb77f4c0e17c7dcc1b70a09f74118.png](../../../_resources/abedb77f4c0e17c7dcc1b70a09f74118.png)
+![abedb77f4c0e17c7dcc1b70a09f74118.png](resources/abedb77f4c0e17c7dcc1b70a09f74118.png)
 
 we need to specified port number otherwise it is not working
 
@@ -196,13 +196,13 @@ ssh mitch@10.10.133.14 -p 2222 why we need specified port number
 
 &nbsp;
 
-![dedd0a6db616f2af12ed79c5e737875c.png](../../../_resources/dedd0a6db616f2af12ed79c5e737875c.png)
+![dedd0a6db616f2af12ed79c5e737875c.png](resources/dedd0a6db616f2af12ed79c5e737875c.png)
 
 ssh
 
 Now if we ls we see the “user.txt” file and read it for our first flag!
 
-![d68d66037288df86068324a2ec86ba81.png](../../../_resources/d68d66037288df86068324a2ec86ba81.png)
+![d68d66037288df86068324a2ec86ba81.png](resources/d68d66037288df86068324a2ec86ba81.png)
 
 user flag
 
@@ -212,7 +212,7 @@ user flag
 
 Next let’s check if any other users have home directories.
 
-![2f9410321f9e4ae5b05fc37deed81d00.png](../../../_resources/2f9410321f9e4ae5b05fc37deed81d00.png)
+![2f9410321f9e4ae5b05fc37deed81d00.png](resources/2f9410321f9e4ae5b05fc37deed81d00.png)
 
 Other users
 
@@ -222,9 +222,9 @@ Other users
 
 We can open root because we are not root privilege
 
-![2c3bcb41c84efa1e46e89339ff96f940.png](../../../_resources/2c3bcb41c84efa1e46e89339ff96f940.png)
+![2c3bcb41c84efa1e46e89339ff96f940.png](resources/2c3bcb41c84efa1e46e89339ff96f940.png)
 
-![25cf757c812b4aeec4af2149791fda2f.png](../../../_resources/25cf757c812b4aeec4af2149791fda2f.png)mitch
+![25cf757c812b4aeec4af2149791fda2f.png](resources/25cf757c812b4aeec4af2149791fda2f.png)mitch
 
 On to privileged escalation! First I like to start off with running “sudo -l” to see what my current user can run.
 
@@ -236,7 +236,7 @@ When you run \`sudo -l\`, it will show you:
 2\. Any restrictions or limitations on those commands.  
 3\. The user's privileges in terms of executing commands as other users or the root user.
 
-![d1965c64f750c709eed17df684c5fa37.png](../../../_resources/d1965c64f750c709eed17df684c5fa37.png)
+![d1965c64f750c709eed17df684c5fa37.png](resources/d1965c64f750c709eed17df684c5fa37.png)
 
 sudo -l
 
@@ -248,7 +248,7 @@ sudo -l
 
 We can see the user “mitch” can run /usr/bin/vim without a password. With that information, let’s check out GTFOBins and see if we can use that for privesc.
 
-<img alt="" class="bh kp lu c jop-noMdConv" width="700" height="318" loading="lazy" role="presentation" src="../../../_resources/1_zHgbmpz67-UND7bOUzI69w.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
+<img alt="" class="bh kp lu c jop-noMdConv" width="700" height="318" loading="lazy" role="presentation" src="resources/1_zHgbmpz67-UND7bOUzI69w.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
 
 GTFOBins
 
@@ -270,13 +270,13 @@ This approach can be useful for running shell commands with root privileges whil
 
 **Answer:** vim
 
-![680722ce6705c0ca32f5b2b194bfbef6.png](../../../_resources/680722ce6705c0ca32f5b2b194bfbef6.png)
+![680722ce6705c0ca32f5b2b194bfbef6.png](resources/680722ce6705c0ca32f5b2b194bfbef6.png)
 
 root shell
 
 It worked! From here all we have left is to grab the root flag and the room is complete.
 
-![7546d7396128a5613b335a3b1fd33f09.png](../../../_resources/7546d7396128a5613b335a3b1fd33f09.png)
+![7546d7396128a5613b335a3b1fd33f09.png](resources/7546d7396128a5613b335a3b1fd33f09.png)
 
 root.txt
 
