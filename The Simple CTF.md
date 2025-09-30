@@ -2,7 +2,7 @@ THM Link: https://tryhackme.com/room/easyctf
 
 Access your local kali with openvpn
 
-![5a98d83d88501da7acfca9041d698655.png](../../../_resources/5a98d83d88501da7acfca9041d698655.png)
+![5a98d83d88501da7acfca9041d698655.png](resources/5a98d83d88501da7acfca9041d698655.png)
 
 Let’s kick off the room with a scan I do on every room, nmap.
 
