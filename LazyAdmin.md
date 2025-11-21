@@ -1,4 +1,4 @@
-[https://tryhackme.com/room/lazyadmin\[\](https://medium.com/@hughbrown123/walk-through-hints-lazyadmin-thm-7771cd773f90)](https://tryhackme.com/room/lazyadmin%5B%5D%28https://medium.com/@hughbrown123/walk-through-hints-lazyadmin-thm-7771cd773f90%29 "https://tryhackme.com/room/lazyadmin%5B%5D(https://medium.com/@hughbrown123/walk-through-hints-lazyadmin-thm-7771cd773f90)")
+https://tryhackme.com/room/lazyadmin
 
 **What is the user flag?**
 
@@ -12,20 +12,20 @@ That page is the **default welcome page** for a **successfully installed and run
     
 - **Apache is working:**
     
-- #### **Ubuntu** (The Operating System) Ubuntu is a very popular operating system that is based on Linux. It's often used for servers because it's stable, secure, and free.
+- **Ubuntu** (The Operating System) Ubuntu is a very popular operating system that is based on Linux. It's often used for servers because it's stable, secure, and free.
     
 
 ![e18cb98c19d4629f6200cbd9cf25c25e.png](resources/e18cb98c19d4629f6200cbd9cf25c25e.png)
 
-Here we encounter some information indicating that the page is not set up. Let's try gathering more information using the Gobuster tool or Dirb
+Here, we encounter some information indicating that the page is not set up. Let's try gathering more information using the Gobuster tool or Dirb
 
 ![46eb3dd3c395dd40701aaecf6fc0a366.png](resources/46eb3dd3c395dd40701aaecf6fc0a366.png)
 
 ![acce71ee8ddd80ded7b0ca131f1f5051.png](resources/acce71ee8ddd80ded7b0ca131f1f5051.png)
 
-Lazy admin is still working ,he is lazy admin :))))
+Lazy admin is still working, he is lazy admin:))))
 
-Unlike the other directories, we can see /inc and /as directories. Let's proceed with our operations by examining these 2 directories.
+Unlike the other directories, we can see the /inc and /as directories. Let's proceed with our operations by examining these 2 directories.
 
 ![6693b5eb2df6d8c013de19acaa63a843.png](resources/6693b5eb2df6d8c013de19acaa63a843.png)
 
@@ -33,7 +33,7 @@ STEP 5: Content/as
 
 ![e563632945da7d27ba4ca195f81c7d0f.png](resources/e563632945da7d27ba4ca195f81c7d0f.png)
 
-In this directory, we encounter a login screen. Let's quickly take a look at the /inc directory to gather more information about this screen.
+In this directory, we encounter a login screen. Let's quickly review the /inc directory to gather more information about this screen.
 
 content/inc
 
@@ -41,7 +41,7 @@ content/inc
 
 The listed files (`404.php`, `db.php`, `do_attachment.php`, `do_sitemap.php`, etc.) appear to be **PHP script components**. The folder name `/inc` often stands for "**include**" or "**includes**," meaning these are files designed to be included by other main scripts to perform specific functions (like connecting to a database, handling sitemaps, or showing alert messages).
 
-In this directory, there is also a mysql_backup directory where we obtained an SQL file and we click it
+In this directory, there is also a mysql_backup directory where we obtained an SQL file, and we click it
 
 ![25036cc56eb1ce860d9753ad786eb6d5.png](resources/25036cc56eb1ce860d9753ad786eb6d5.png)
 
@@ -57,17 +57,15 @@ user: manager
 
 ![7014046afa1dd25dbd51a122946e7d76.png](resources/7014046afa1dd25dbd51a122946e7d76.png)
 
-&nbsp;
-
 ![7e677933e13039e18c62b1e607dac1de.png](resources/7e677933e13039e18c62b1e607dac1de.png)
 
 https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
 
-change the local IP and save it
+Change the local IP and save it
 
 Open your terminal and type nc -lvnp 1234 and enter
 
-open your browser and click sell.php file
+Open your browser and click the sell.php file
 
 ![cdc1f797cbc32d9df22a23fa7ff97f10.png](resources/cdc1f797cbc32d9df22a23fa7ff97f10.png)
 
@@ -94,13 +92,10 @@ This command waits for another machine to *connect back* to this port
     
 - Lighttpd
     
-
 It is *not* a real human login.  
 It exists only so the web server can run safely without using root.
 
 ![9cc665036e00e20e02240cd6ba61c863.png](resources/9cc665036e00e20e02240cd6ba61c863.png)
-
-&nbsp;
 
 ![9abea0393aed1830ca99c01a741fea12.png](resources/9abea0393aed1830ca99c01a741fea12.png)
 
@@ -108,7 +103,7 @@ It exists only so the web server can run safely without using root.
 
 THM{63e5bce9271952aad1113b6f1ac28a07}
 
-just work around and try to find more information
+Just work around and try to find more information
 
 python -c 'import pty; pty.spawn ("/bin/sh")'
 
