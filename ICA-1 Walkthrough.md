@@ -211,7 +211,6 @@ After updating the admin password, I logged in to the **qdPM web application** w
 
 Using the new admin account `pwned`, I created a new project and uploaded a **PHP reverse shell** in the `attachments` section.
 
-![04c690ef488200f91e6fe4caaff7e217.png](resources/04c690ef488200f91e6fe4caaff7e217.png)
 ![Screenshot20260317130740.png](resources/Screenshot20260317130740.png)
 
 With the reverse shell uploaded, navigating to `/uploads/attachments` displays the uploaded file. From there, the reverse shell can be executed by clicking on the attachment.
