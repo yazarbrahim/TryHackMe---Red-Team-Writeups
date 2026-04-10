@@ -4,7 +4,7 @@ THM Link: https://tryhackme.com/r/room/crackthehash
 
 First try to find hash type with hash-identifier command
 
-![7a7e6563088bdb551e40b4192d4536f5.png](../../../../_resources/7a7e6563088bdb551e40b4192d4536f5.png)
+![7a7e6563088bdb551e40b4192d4536f5.png](resources/7a7e6563088bdb551e40b4192d4536f5.png)
 
 Once we identify hash type then we can find hash mode
 
