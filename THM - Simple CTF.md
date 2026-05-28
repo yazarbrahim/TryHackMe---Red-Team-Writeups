@@ -2,7 +2,7 @@ Let’s kick off the room with a scan I do on every room, nmap.
 
 nmap -p- -sC -sV 10.10.186.250 -vvv -oA nmap_ful
 
-![b75780ba4f235c2b7c461d4d26d346f5.png](../../../_resources/b75780ba4f235c2b7c461d4d26d346f5.png)
+![b75780ba4f235c2b7c461d4d26d346f5.png](resources/b75780ba4f235c2b7c461d4d26d346f5.png)
 
 From our results, we can see ports 21 (FTP), 80 (HTTP), and 2222 (SSH) are open.
 
@@ -14,13 +14,13 @@ nmap -sV -p 1-1000 10.10.286.250
 
 nmap -sV --top-ports 1000 10.10.186.250
 
-![952d3b9ab95cf52241f7dae669c9d060.png](../../../_resources/952d3b9ab95cf52241f7dae669c9d060.png)
+![952d3b9ab95cf52241f7dae669c9d060.png](resources/952d3b9ab95cf52241f7dae669c9d060.png)
 
 Answer: 2
 
 ***What is running on the higher port?***
 
-![c8649d01e49a91433c9a34c03fac8c3a.png](../../../_resources/c8649d01e49a91433c9a34c03fac8c3a.png)
+![c8649d01e49a91433c9a34c03fac8c3a.png](resources/c8649d01e49a91433c9a34c03fac8c3a.png)
 
 Answer: SSH
 
@@ -30,13 +30,13 @@ First of all, I did a `nikto` scan, but no results came out. Now let’s do a di
 
 nikto -h 10.65.186.48
 
-![d9ebf2644a824a460a62f183b92698c0.png](../../../_resources/d9ebf2644a824a460a62f183b92698c0.png)
+![d9ebf2644a824a460a62f183b92698c0.png](resources/d9ebf2644a824a460a62f183b92698c0.png)
 
 Knowing there is a website being hosted let’s check it out for any additional information.
 
 First, let’s just browse to the IP and see what we get.
 
-![d6e0fa634b938d6b230919b7f958179e.png](../../../_resources/d6e0fa634b938d6b230919b7f958179e.png)
+![d6e0fa634b938d6b230919b7f958179e.png](resources/d6e0fa634b938d6b230919b7f958179e.png)
 
 Webpage port 80
 
@@ -46,15 +46,15 @@ Next, we can use “gobuster” to scan the website for any additional pages.
 
 or dirb
 
-![9832b8d8ecdf05cff02cb1dedb8d9f3c.png](../../../_resources/9832b8d8ecdf05cff02cb1dedb8d9f3c.png)
+![9832b8d8ecdf05cff02cb1dedb8d9f3c.png](resources/9832b8d8ecdf05cff02cb1dedb8d9f3c.png)
 
-![c834dee39945585adf0dcf2b207bc4c3.png](../../../_resources/c834dee39945585adf0dcf2b207bc4c3.png)
+![c834dee39945585adf0dcf2b207bc4c3.png](resources/c834dee39945585adf0dcf2b207bc4c3.png)
 
 “gobuster” results
 
 Using the medium wordlist we supplied, gobuster was able to find there is a webpage at “/simple”. Let’s try browsing to it now and see what we find.
 
-![a7bdfd84c19028eb34d3bf2162b6b4ae.png](../../../_resources/a7bdfd84c19028eb34d3bf2162b6b4ae.png)
+![a7bdfd84c19028eb34d3bf2162b6b4ae.png](resources/a7bdfd84c19028eb34d3bf2162b6b4ae.png)
 
 /simple webpage
 
@@ -64,7 +64,7 @@ Let’s see if there is anything online about this particular version by simply 
 
 In our results, we see a page on Exploit-DB that matches our search and refers to a SQL injection attack utilizing CVE-2019–9053.
 
-![a302b63d770b28a19a8896491e68e0dc.png](../../../_resources/a302b63d770b28a19a8896491e68e0dc.png)
+![a302b63d770b28a19a8896491e68e0dc.png](resources/a302b63d770b28a19a8896491e68e0dc.png)
 
 Exploit-DB
 
@@ -93,7 +93,7 @@ CVE-2019-9053
 
 ***To what kind of vulnerability is the application vulnerable?***
 
-***![d0626436684e09413a6dca91dd0d4cd2.png](../../../_resources/d0626436684e09413a6dca91dd0d4cd2.png)***
+***![d0626436684e09413a6dca91dd0d4cd2.png](resources/d0626436684e09413a6dca91dd0d4cd2.png)***
 
 SQLi
 
@@ -105,13 +105,13 @@ Trying to run the exploit.py script
 
 python3 46635.py -u http://10.145.154.150/simple/ --crack -w /root/Desktop/wordlists/rockyou.txt
 
-![e6d14a53be0a8ab341e4afcb17b24442.png](../../../_resources/e6d14a53be0a8ab341e4afcb17b24442.png)
+![e6d14a53be0a8ab341e4afcb17b24442.png](resources/e6d14a53be0a8ab341e4afcb17b24442.png)
 
 cat 46635.py | grep print
 
-![794bb17e46b43035e62e5994588d612a.png](../../../_resources/794bb17e46b43035e62e5994588d612a.png)
+![794bb17e46b43035e62e5994588d612a.png](resources/794bb17e46b43035e62e5994588d612a.png)
 
-![3b9678f26a9e9f138f61cdb2c20f9441.png](../../../_resources/3b9678f26a9e9f138f61cdb2c20f9441.png)
+![3b9678f26a9e9f138f61cdb2c20f9441.png](resources/3b9678f26a9e9f138f61cdb2c20f9441.png)
 
 it did not work we need to convert python2 code python3 you can use AI
 
@@ -125,7 +125,7 @@ Here we can see we need to supply a URL using the -u flag and can supply a wordl
 
 python3 46635.py -u http://10.145.134.232/simple/ --crack -w /root/Desktop/wordlists/rockyou.txt
 
-![9d5ee2cd54c06b02a81985ecd5124be6.png](../../../_resources/9d5ee2cd54c06b02a81985ecd5124be6.png)
+![9d5ee2cd54c06b02a81985ecd5124be6.png](resources/9d5ee2cd54c06b02a81985ecd5124be6.png)
 
 Exploit syntax
 
@@ -133,11 +133,11 @@ Now, let’s run it and see what we get in return.
 
 python3 46635.py -u http://10.10.133.14/simple/
 
-![fd2d980be8c1226c8a517d1c9249f71e.png](../../../_resources/fd2d980be8c1226c8a517d1c9249f71e.png)
+![fd2d980be8c1226c8a517d1c9249f71e.png](resources/fd2d980be8c1226c8a517d1c9249f71e.png)
 
 *(Note: Initially the script would not run due to my machine not having “termcolor” module installed for Python. To fix:* `pip install termcolor`*)*
 
-![ff0cd918a78e28deea4ed4f86d45514a.png](../../../_resources/ff0cd918a78e28deea4ed4f86d45514a.png)
+![ff0cd918a78e28deea4ed4f86d45514a.png](resources/ff0cd918a78e28deea4ed4f86d45514a.png)
 
 Exploit results
 
@@ -150,25 +150,25 @@ we got username and hash password we can crack this hash with hashcat
 
 hash-identifier
 
-![cc829f8ba0dd372caa54a42b3236ba76.png](../../../_resources/cc829f8ba0dd372caa54a42b3236ba76.png)
+![cc829f8ba0dd372caa54a42b3236ba76.png](resources/cc829f8ba0dd372caa54a42b3236ba76.png)
 
 find hash code ; https://hashcat.net/wiki/doku.php?id=example_hashes
 
-![4a11e20bb198b54f8e0e0b49380d01f4.png](../../../_resources/4a11e20bb198b54f8e0e0b49380d01f4.png)
+![4a11e20bb198b54f8e0e0b49380d01f4.png](resources/4a11e20bb198b54f8e0e0b49380d01f4.png)
 
 hashcat -m 20 0c01f4468bd75d7a84c7eb73846e8d96:1dac0d92e9fa6bb2 '/home/kali/Desktop/rockyou.txt'
 
-![c1175f0a0bba170367428be0304c5575.png](../../../_resources/c1175f0a0bba170367428be0304c5575.png)
+![c1175f0a0bba170367428be0304c5575.png](resources/c1175f0a0bba170367428be0304c5575.png)
 
 Bingo! We got a username and a cracked password returned from the exploit.
 
 Second way --> just do Hydra
 
-![814a2b82edb7db599ab94675466faca6.png](../../../_resources/814a2b82edb7db599ab94675466faca6.png)
+![814a2b82edb7db599ab94675466faca6.png](resources/814a2b82edb7db599ab94675466faca6.png)
 
 0c01f4468bd75d7a84c7eb73846e8d96:1dac0d92e9fa6bb2
 
-***![954502ba2528bb2d09eff3b780f7ceef.png](../../../_resources/954502ba2528bb2d09eff3b780f7ceef.png)***
+***![954502ba2528bb2d09eff3b780f7ceef.png](resources/954502ba2528bb2d09eff3b780f7ceef.png)***
 
 ***What’s the password?***
 secret
@@ -182,7 +182,7 @@ Username found: mitch
 
 password: secret
 
-![abedb77f4c0e17c7dcc1b70a09f74118.png](../../../_resources/abedb77f4c0e17c7dcc1b70a09f74118.png)
+![abedb77f4c0e17c7dcc1b70a09f74118.png](resources/abedb77f4c0e17c7dcc1b70a09f74118.png)
 
 we need to specified port number otherwise it is not working
 
@@ -194,13 +194,13 @@ ssh mitch@10.10.133.14 -p 2222 why we need specified port number
 
 \--> Specifying the port number with `-p 2222` is necessary when the SSH service is configured to run on a port other than the default port 22. Without specifying the port, the SSH client would attempt to connect to port 22, and the connection would fail if the SSH service is running on a different port, such as 2222.
 
-![dedd0a6db616f2af12ed79c5e737875c.png](../../../_resources/dedd0a6db616f2af12ed79c5e737875c.png)
+![dedd0a6db616f2af12ed79c5e737875c.png](resources/dedd0a6db616f2af12ed79c5e737875c.png)
 
 ssh
 
 Now if we ls we see the “user.txt” file and read it for our first flag!
 
-![d68d66037288df86068324a2ec86ba81.png](../../../_resources/d68d66037288df86068324a2ec86ba81.png)
+![d68d66037288df86068324a2ec86ba81.png](resources/d68d66037288df86068324a2ec86ba81.png)
 
 user flag
 
@@ -210,7 +210,7 @@ user flag
 
 Next let’s check if any other users have home directories.
 
-![2f9410321f9e4ae5b05fc37deed81d00.png](../../../_resources/2f9410321f9e4ae5b05fc37deed81d00.png)
+![2f9410321f9e4ae5b05fc37deed81d00.png](resources/2f9410321f9e4ae5b05fc37deed81d00.png)
 
 Other users
 
@@ -220,9 +220,9 @@ Other users
 
 We can open root because we are not root privilege
 
-![2c3bcb41c84efa1e46e89339ff96f940.png](../../../_resources/2c3bcb41c84efa1e46e89339ff96f940.png)
+![2c3bcb41c84efa1e46e89339ff96f940.png](resources/2c3bcb41c84efa1e46e89339ff96f940.png)
 
-![25cf757c812b4aeec4af2149791fda2f.png](../../../_resources/25cf757c812b4aeec4af2149791fda2f.png)mitch
+![25cf757c812b4aeec4af2149791fda2f.png](resources/25cf757c812b4aeec4af2149791fda2f.png)mitch
 
 On to privileged escalation! First I like to start off with running “sudo -l” to see what my current user can run.
 
@@ -234,11 +234,11 @@ When you run \`sudo -l\`, it will show you:
 2\. Any restrictions or limitations on those commands.  
 3\. The user's privileges in terms of executing commands as other users or the root user.
 
-![d1965c64f750c709eed17df684c5fa37.png](../../../_resources/d1965c64f750c709eed17df684c5fa37.png)
+![d1965c64f750c709eed17df684c5fa37.png](resources/d1965c64f750c709eed17df684c5fa37.png)
 
 sudo -l
 
-![677635c4278ed618ced8bf5bb61291e7.png](../../../_resources/677635c4278ed618ced8bf5bb61291e7.png)
+![677635c4278ed618ced8bf5bb61291e7.png](resources/677635c4278ed618ced8bf5bb61291e7.png)
 
 or
 
@@ -248,7 +248,7 @@ or
 
 We can see the user “mitch” can run /usr/bin/vim without a password. With that information, let’s check out GTFOBins and see if we can use that for privesc.
 
-![6d105c2a63f237f1399cf54040d5a1c3.png](../../../_resources/6d105c2a63f237f1399cf54040d5a1c3.png)
+![6d105c2a63f237f1399cf54040d5a1c3.png](resources/6d105c2a63f237f1399cf54040d5a1c3.png)
 
 GTFOBins
 
@@ -270,13 +270,13 @@ This approach can be useful for running shell commands with root privileges whil
 
  vim
 
-![680722ce6705c0ca32f5b2b194bfbef6.png](../../../_resources/680722ce6705c0ca32f5b2b194bfbef6.png)
+![680722ce6705c0ca32f5b2b194bfbef6.png](resources/680722ce6705c0ca32f5b2b194bfbef6.png)
 
 root shell
 
 It worked! From here all we have left is to grab the root flag and the room is complete.
 
-![7546d7396128a5613b335a3b1fd33f09.png](../../../_resources/7546d7396128a5613b335a3b1fd33f09.png)
+![7546d7396128a5613b335a3b1fd33f09.png](resources/7546d7396128a5613b335a3b1fd33f09.png)
 
 root.txt
 
@@ -361,4 +361,4 @@ Overall easy but good room as it introduced us to using nmap and gobuster, doing
 
 `logout`
 
-![aa01ac7f95bfdc0b14d858578eb198c9.png](../../../_resources/aa01ac7f95bfdc0b14d858578eb198c9.png)
+![aa01ac7f95bfdc0b14d858578eb198c9.png](resources/aa01ac7f95bfdc0b14d858578eb198c9.png)
