@@ -2,19 +2,19 @@
 
 ![db8f8a0d5e39b5c159d1d77443e1b5f1.png]( resources/db8f8a0d5e39b5c159d1d77443e1b5f1.png)
 
-**Task 1 : Open for business!**
+**Task 1: Open for business!**
 
-Within this room, we will look at OWASP’s TOP 10 vulnerabilities in web applications. You will find these in all types of web applications. But for today we will be looking at OWASP’s own creation, Juice Shop!
+Within this room, we will look at OWASP’s TOP 10 vulnerabilities in web applications. You will find these in all types of web applications. But for today, we will be looking at OWASP’s own creation, Juice Shop!
 
 **#1 Deploy the VM attached to this task to get started! You can access this machine by using your browser-based machine, or if you’re connected through** **OpenVPN**
 
-**#2 Once the machine has loaded, access it by copying and pasting its IP into your browser; if you’re using the browser-based machine, paste the machines IP into a browser on that machine.**
+**#2 Once the machine has loaded, access it by copying and pasting its IP into your browser; if you’re using the browser-based machine, paste the machine's IP into a browser on that machine.**
 
-**Task 2 : Let’s go on an adventure!**
+**Task 2: Let’s go on an adventure!**
 
 **Question #1: What’s the Administrator’s email address?**
 
-We have to go visit website and by clicking on Apple Juice(1000ml) product, we can find out the admin’s email address.
+We have to go visit the website, and by clicking on the Apple Juice(1000ml) product, we can find out the admin’s email address.
 
 ![d17ef36989d9f9ef74dab7f2befd1f89.png]( resources/d17ef36989d9f9ef74dab7f2befd1f89.png)
 
@@ -24,15 +24,15 @@ We have to go visit website and by clicking on Apple Juice(1000ml) product, we c
 
 **Question #2: What parameter is used for searching?**
 
-Click on the magnifying glass in the top right of the application will pop out a search bar.
+Clicking on the magnifying glass in the top right of the application will pop out a search bar.
 
 ![b4373577f5fe0bf7c83419724064e17c.png]( resources/b4373577f5fe0bf7c83419724064e17c.png)
 
-We can then input text and by pressing Enter will search for the text which was just inputted.
+We can then input text and, by pressing Enter, search for the text that was just input.
 
 ![0b19c7e1a20e384386b1e02dfba99eee.png]( resources/0b19c7e1a20e384386b1e02dfba99eee.png)
 
-Now pay attention to the URL which will now update with the text we just entered.
+Now pay attention to the URL, which will now update with the text we just entered.
 
 ![4a5dc9c5343b937bf99244647be0e027.png]( resources/4a5dc9c5343b937bf99244647be0e027.png)
 
@@ -48,7 +48,7 @@ Search green smoothie
 
 **![522d2d0d7138ad378fd86ad6a75466a0.png]( resources/522d2d0d7138ad378fd86ad6a75466a0.png)**
 
-Jim did a review on the Green Smoothie product. We can see that he mentions a replicator.
+Jim did a review of the Green Smoothie product. We can see that he mentions a replicator.
 
 ![8360215b9df7a9e2c0dacc4c56cb8be6.png]( resources/8360215b9df7a9e2c0dacc4c56cb8be6.png)
 
@@ -58,28 +58,28 @@ Jim did a review on the Green Smoothie product. We can see that he mentions a re
 
 **Task 3: Inject the juice**
 
-This task will be focusing on injection vulnerabilities. Injection vulnerabilities are quite dangerous to a company as they can potentially cause downtime and/or loss of data. Identifying injection points within a web application is usually quite simple, as most of them will return an error. There are many types of injection attacks, some of them are:
+This task will focus on injection vulnerabilities. Injection vulnerabilities are quite dangerous to a company as they can potentially cause downtime and/or loss of data. Identifying injection points within a web application is usually quite simple, as most of them will return an error. There are many types of injection attacks; some of them are:
 
 **SQL Injection**  
-SQL Injection is when an attacker enters a malicious or malformed query to either retrieve or tamper data from a database. And in some cases, log into accounts.  
+SQL Injection is when an attacker enters a malicious or malformed query to either retrieve or tamper with data from a database. In some cases, log into accounts.  
 **Command Injection**  
-Command Injection is when web applications take input or user-controlled data and run them as system commands. An attacker may tamper with this data to execute their own system commands. This can be seen in applications that perform misconfigured ping tests.  
+Command Injection is when web applications take input or user-controlled data and run it as system commands. An attacker may tamper with this data to execute their own system commands. This can be seen in applications that perform misconfigured ping tests.  
 **Email Injection**  
-Email injection is a security vulnerability that allows malicious users to send email messages without prior authorization by the email server. These occur when the attacker adds extra data to fields, which are not interpreted by the server correctly.
+Email injection is a security vulnerability that allows malicious users to send email messages without prior authorization by the email server. These occur when the attacker adds extra data to fields that are not interpreted by the server correctly.
 
 **Question #1: Brute force the Administrator account’s password!**
 
-We need to start burp-suite and enable the Burp on browser
+We need to start Burp Suite and enable Burp on the browser
 
 ![3d67c0e4fe8afc7467306844a477fde2.png]( resources/3d67c0e4fe8afc7467306844a477fde2.png)
 
 ![fe1a8089d0fd527c342c1ba12c5ae8ef.png]( resources/fe1a8089d0fd527c342c1ba12c5ae8ef.png)
 
-You need to enabled the Burb on browser
+You need to enable the Burb on the browser
 
 **Before** clicking submit, make sure **Intercept mode is** **on**
 
-see the post method.
+See the post method.
 
 ![491bf0c737954a7d69dbe24779e0b7f4.png]( resources/491bf0c737954a7d69dbe24779e0b7f4.png)
 
@@ -107,9 +107,9 @@ Login Bender account
 
 ![d16ceedd41838b296df9d95fc560c26f.png]( resources/d16ceedd41838b296df9d95fc560c26f.png)
 
-make sure Intercept is on and Burp is enable before click login
+Make sure Intercept is on and Burp is enabled before clicking Login
 
-Click the login and then click the forward
+Click Login and then click Forward
 
 ![e56400e11da9eee6bd77bdc65cd80351.png]( resources/e56400e11da9eee6bd77bdc65cd80351.png)
 
@@ -121,7 +121,7 @@ Click the login and then click the forward
 
 **Question #1: Bruteforce the Administrator account’s password!**
 
-Go to Positions and then select the **Clear §** button. In the password field place two § inside the quotes. To clarify, the § § is not two sperate inputs but rather Burp’s implementation of quotations e.g. “”. The request should look like the image below.
+Go to Positions and then select the **Clear §** button. In the password field, place two § inside the quotes. To clarify, the § § is not two separate inputs but rather Burp’s implementation of quotations, e.g. “”. The request should look like the image below.
 
 For the payload, we will be using the best1050.txt from Seclists. (Which can be installed via: apt-get install seclists)
 
@@ -133,9 +133,9 @@ A **failed** request will receive a **401 Unauthorized**
 
 Whereas a **successful** request will return a **200 OK**.
 
-Once completed, login to the account with the password.
+Once completed, log in to the account with the password.
 
-#send the request to intruder.
+# Send the request to Intruder.
 
 Select the password and click Add.
 
@@ -170,11 +170,11 @@ Click the payload
 
 *![d16827703e01babf601ace322c5e95bb.png]( resources/d16827703e01babf601ace322c5e95bb.png)*
 
-Check Status tab and 200 is successful code  
+Check the Status tab, and 200 is a successful code  
 ![cf4a663d8bdca3ec4f1df088bc53ca0f.png]( resources/cf4a663d8bdca3ec4f1df088bc53ca0f.png)  
 \*
 
-Login with admin123
+Log in with admin123
 
 ![10114ec6ec275ca267adc6223f952da5.png]( resources/10114ec6ec275ca267adc6223f952da5.png)
 
@@ -186,7 +186,7 @@ pass: admin123
 
 **Question #2: Reset Jim’s password!**
 
-Believe it or not, the reset password mechanism can also be exploited! When inputted into the email field in the Forgot Password page, Jim’s security question is set to *“Your eldest siblings middle name?”*.
+Believe it or not, the reset password mechanism can also be exploited! When entered into the email field in the Forgot Password page, Jim’s security question is set to *“Your eldest sibling's middle name?”*.
 
 Looks like his brother’s middle name is **Samuel**
 
@@ -208,15 +208,15 @@ Click Change
 
 ![3cfa3027f09bef39f59eb351c93143a4.png]( resources/3cfa3027f09bef39f59eb351c93143a4.png)
 
-security question : Samuel
+Security question: Samuel
 
 **Answer**: 3c3e2d6ef99b733b947e92f8e2a9ed08bf57ea63
 
 **Task 5: AH! Don’t look!**
 
-A web application should store and tr Answermit sensitive data safely and securely. But in some cases, the developer may not correctly protect their sensitive data, making it vulnerable.
+A web application should store and transmit sensitive data safely and securely. But in some cases, the developer may not correctly protect their sensitive data, making it vulnerable.
 
-Most of the time, data protection is not applied consistently across the web application making certain pages accessible to the public. Other times information is leaked to the public without the knowledge of the developer, making the web application vulnerable to an attack.
+Most of the time, data protection is not applied consistently across the web application, making certain pages accessible to the public. Other times, information is leaked to the public without the knowledge of the developer, making the web application vulnerable to an attack.
 
 More information: Sensitive Data Exposure
 
@@ -224,7 +224,7 @@ More information: Sensitive Data Exposure
 
 We can see /ftp/legal.md
 
-We will download the acquisitions.md and save it. It looks like there are other files of interest here as well.
+We will download acquisitions.md and save it. It looks like there are other files of interest here as well.
 
 After downloading it, navigate to the home page to receive the flag!
 
@@ -232,13 +232,13 @@ After downloading it, navigate to the home page to receive the flag!
 
 ![ef0528090f2e0382d472887fc636f766.png]( resources/ef0528090f2e0382d472887fc636f766.png)
 
-On URL write /ftp
+In the URL, write /ftp
 
 ![850908fe8b62d1a8f5f7145d62914934.png]( resources/850908fe8b62d1a8f5f7145d62914934.png)
 
 ![0506602c304ae0c50d8433428457b531.png]( resources/0506602c304ae0c50d8433428457b531.png)
 
-Download or save page as acquisitions.md
+Download or save the page as acquisitions.md
 
 ![0ee00f4468760b12ce27f86bd3012257.png]( resources/0ee00f4468760b12ce27f86bd3012257.png)
 
@@ -248,9 +248,9 @@ Download or save page as acquisitions.md
 
 **Question #2: Log into MC SafeSearch’s account!**
 
-After watching the video there are certain parts of the song that stand out.
+After watching the video, there are certain parts of the song that stand out.
 
-He notes that his password is “Mr. Noodles” but he has replaced some “vowels into zeros”, meaning that he just replaced the o’s into 0's.
+He notes that his password is “Mr. Noodles,” but he has replaced some “vowels into zeros”, meaning that he just replaced the o’s into 0's.
 
 We now know the password to the **mc.safesearch@juice-sh.op** account is “**Mr. N00dles**”
 
@@ -278,9 +278,9 @@ http://10.67.191.103/ftp/package.json.bak%2500.md
 
 **Task 6: Who’s flying this thing?**
 
-Modern-day systems will allow for multiple users to have access to different pages. Administrators most commonly use an administration page to edit, add and remove different elements of a website. You might use these when you are building a website with programs such as Weebly or Wix.
+Modern-day systems will allow for multiple users to have access to different pages. Administrators most commonly use an administration page to edit, add, and remove different elements of a website. You might use these when you are building a website with programs such as Weebly or Wix.
 
-When Broken Access Control exploits or bugs are found, it will be categorised into one of **two types**:
+When Broken Access Control exploits or bugs are found, they will be categorised into one of **two types**:
 
 **Horizontal** Privilege Escalation →  
 Occurs when a user can perform an action or access data of another user with the **same** level of permissions.  
@@ -289,7 +289,7 @@ Occurs when a user can perform an action or access data of another user with a *
 
 **Question #1: Access the administration page!**
 
-We are then going to refresh the page and look for a javascript file for **main-es2015.js**
+We are then going to refresh the page and look for a JavaScript file for **main-es2015.js**
 
 ![4af17e29ba8f6f9bdcc2c0a003e33deb.png]( resources/4af17e29ba8f6f9bdcc2c0a003e33deb.png)
 
@@ -299,17 +299,17 @@ Search Administrator
 
 ![d10fd3a78cadd05268328d997ce2d66b.png]( resources/d10fd3a78cadd05268328d997ce2d66b.png)
 
-Logout and login in to Admin account
+Log out and log in to the Admin account
 
 ![17c7b16e697a6de4a0ec29e307f662b7.png]( resources/17c7b16e697a6de4a0ec29e307f662b7.png)
 
-This hints towards a page called “/#/administration” as can be seen by the about path a couple lines below, but going there while not logged in doesn’t work.
+This hints towards a page called “/#/administration,” as can be seen by the about path a couple of lines below, but going there while not logged in doesn’t work.
 
-As this is an Administrator page, it makes sense that we need to be in the Admin account in order to view it.
+As this is an Administrator page, it makes sense that we need to be in the Admin account to view it.
 
 A good way to stop users from accessing this is to only load parts of the application that need to be used by them. This stops sensitive information such as an admin page from been leaked or viewed.
 
-change to search tro administration
+Change to search to administration
 
 ![87d2d2c82f84352164f95b5b06190a6b.png]( resources/87d2d2c82f84352164f95b5b06190a6b.png)
 
@@ -321,11 +321,11 @@ change to search tro administration
 
 **Question #2: View another user’s shopping basket!**
 
-Login to the Admin account and click on ‘Your Basket’. Make sure Burp is running so you can capture the request!
+Log in to the Admin account and click on ‘Your Basket’. Make sure Burp is running so you can capture the request!
 
 ![f093b6b57882c940783f15ad08eb34e8.png]( resources/f093b6b57882c940783f15ad08eb34e8.png)
 
-Make sure intercept is on and Burp enable  
+Make sure intercept is on, and Burp is enabled  
 ![191ee4abde411a5759ba8cb1517edd0f.png]( resources/191ee4abde411a5759ba8cb1517edd0f.png)
 
 click basket  
@@ -349,11 +349,11 @@ Click Forward
 
 Navigate to the http://machine_ip/#/administration page again and click the **bin icon** next to the review with 5 stars!
 
-Disable to Burp and Intercept
+Disable Burp and Intercept
 
 ![4389510080111c64641a50017552e022.png]( resources/4389510080111c64641a50017552e022.png)
 
-Cnage the administration
+Change the administration
 
 ![4ea2f9ba883156d77275abbc2dec0c8c.png]( resources/4ea2f9ba883156d77275abbc2dec0c8c.png)
 
@@ -365,20 +365,20 @@ Cnage the administration
 
 **Task 7: Where did that come from?**
 
-XSS or Cross-site scripting is a vulnerability that allows attackers to run javascript in web applications. These are one of the most found bugs in web applications. Their complexity ranges from easy to extremely hard, as each web application parses the queries in a different way.
+XSS, or Cross-site scripting, is a vulnerability that allows attackers to run JavaScript in web applications. These are one of the most commonly found bugs in web applications. Their complexity ranges from easy to extremely hard, as each web application parses the queries differently.
 
 **There are three major types of XSS attacks:**
 
 DOM (Special)  
 **DOM XSS** *(Document Object Model-based Cross-site Scripting)* uses the HTML environment to execute malicious javascript. This type of attack commonly uses the *&lt;script&gt;&lt;/script&gt;* HTML tag.  
 Persistent (Server-side)  
-**Persistent XSS** is javascript that is run when the server loads the page containing it. These can occur when the server does not sanitise the user data when it is **uploaded** to a page. These are commonly found on blog posts.  
+**Persistent XSS** is JavaScript that is run when the server loads the page containing it. These can occur when the server does not sanitise the user data when it is **uploaded** to a page. These are commonly found on blog posts.  
 Reflected (Client-side)  
-**Reflected XSS** is javascript that is run on the client-side end of the web application. These are most commonly found when the server doesn’t sanitise **search** data.
+**Reflected XSS** is JavaScript that is run on the client-side end of the web application. These are most commonly found when the server doesn’t sanitise **search** data.
 
 **Question #1: Perform a DOM XSS!**
 
-We will be using the iframe element with a javascript alert tag:
+We will be using the iframe element with a JavaScript alert tag:
 
 *&lt;iframe src=”javascript:alert(\`xss\`)”&gt;*
 
@@ -392,7 +392,7 @@ Inputting this into the **search bar** will trigger the alert.
 
 **#2 Question #2: Perform a persistent XSS!**
 
-First, login to the **admin** account.
+First, log in to the **admin** account.
 
 We are going to navigate to the “**Last Login IP**” page for this attack.
 
@@ -412,7 +412,7 @@ Add the header
 
 ![c0be14a345356bba044af5bf123c56ac.png]( resources/c0be14a345356bba044af5bf123c56ac.png)
 
-We will then head over to the Headers tab where we will add a new header:
+We will then head over to the Headers tab, where we will add a new header:
 
 Click forward
 
@@ -431,7 +431,7 @@ First, we are going to need to be on the right page to perform the reflected XSS
 
 **![77e302b781518ee919a126fdf7051f72.png]( resources/77e302b781518ee919a126fdf7051f72.png)**
 
-From there you will see a “**Truck**” icon, clicking on that will bring you to the track result page. You will also see that there is an id paired with the order.
+From there, you will see a “**Truck**” icon; clicking on that will bring you to the track result page. You will also see that there is an ID paired with the order.
 
 ![729d6d0f4a48efbb67246823832315af.png]( resources/729d6d0f4a48efbb67246823832315af.png)
 
@@ -443,7 +443,7 @@ From there you will see a “**Truck**” icon, clicking on that will bring you 
 
 ![c16ff45ab86d852f5740b4ad725ce95a.png]( resources/c16ff45ab86d852f5740b4ad725ce95a.png)
 
-Update the url
+Update the URL
 
 ![5b36a1fbae224af7a518e40127709c0b.png]( resources/5b36a1fbae224af7a518e40127709c0b.png)
 
