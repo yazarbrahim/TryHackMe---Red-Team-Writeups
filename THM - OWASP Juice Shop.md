@@ -1,6 +1,6 @@
 # OWASP Juice Shop
 
-![db8f8a0d5e39b5c159d1d77443e1b5f1.png](../../_resources/db8f8a0d5e39b5c159d1d77443e1b5f1.png)
+![db8f8a0d5e39b5c159d1d77443e1b5f1.png]( resources/db8f8a0d5e39b5c159d1d77443e1b5f1.png)
 
 **Task 1 : Open for business!**
 
@@ -16,9 +16,9 @@ Within this room, we will look at OWASP’s TOP 10 vulnerabilities in web applic
 
 We have to go visit website and by clicking on Apple Juice(1000ml) product, we can find out the admin’s email address.
 
-![d17ef36989d9f9ef74dab7f2befd1f89.png](../../_resources/d17ef36989d9f9ef74dab7f2befd1f89.png)
+![d17ef36989d9f9ef74dab7f2befd1f89.png]( resources/d17ef36989d9f9ef74dab7f2befd1f89.png)
 
-![846ff339180544c06c738f2a4bc781fe.png](../../_resources/846ff339180544c06c738f2a4bc781fe.png)
+![846ff339180544c06c738f2a4bc781fe.png]( resources/846ff339180544c06c738f2a4bc781fe.png)
 
 **Answer** : admin@juice-sh.op
 
@@ -26,15 +26,15 @@ We have to go visit website and by clicking on Apple Juice(1000ml) product, we c
 
 Click on the magnifying glass in the top right of the application will pop out a search bar.
 
-![b4373577f5fe0bf7c83419724064e17c.png](../../_resources/b4373577f5fe0bf7c83419724064e17c.png)
+![b4373577f5fe0bf7c83419724064e17c.png]( resources/b4373577f5fe0bf7c83419724064e17c.png)
 
 We can then input text and by pressing Enter will search for the text which was just inputted.
 
-![0b19c7e1a20e384386b1e02dfba99eee.png](../../_resources/0b19c7e1a20e384386b1e02dfba99eee.png)
+![0b19c7e1a20e384386b1e02dfba99eee.png]( resources/0b19c7e1a20e384386b1e02dfba99eee.png)
 
 Now pay attention to the URL which will now update with the text we just entered.
 
-![4a5dc9c5343b937bf99244647be0e027.png](../../_resources/4a5dc9c5343b937bf99244647be0e027.png)
+![4a5dc9c5343b937bf99244647be0e027.png]( resources/4a5dc9c5343b937bf99244647be0e027.png)
 
 http://10.67.191.103/#/search?q=a
 
@@ -46,13 +46,13 @@ We can now see the search parameter after the /#/search? the letter q
 
 Search green smoothie
 
-**![522d2d0d7138ad378fd86ad6a75466a0.png](../../_resources/522d2d0d7138ad378fd86ad6a75466a0.png)**
+**![522d2d0d7138ad378fd86ad6a75466a0.png]( resources/522d2d0d7138ad378fd86ad6a75466a0.png)**
 
 Jim did a review on the Green Smoothie product. We can see that he mentions a replicator.
 
-![8360215b9df7a9e2c0dacc4c56cb8be6.png](../../_resources/8360215b9df7a9e2c0dacc4c56cb8be6.png)
+![8360215b9df7a9e2c0dacc4c56cb8be6.png]( resources/8360215b9df7a9e2c0dacc4c56cb8be6.png)
 
-![7e874c6f57207a296feda22da794b17e.png](../../_resources/7e874c6f57207a296feda22da794b17e.png)
+![7e874c6f57207a296feda22da794b17e.png]( resources/7e874c6f57207a296feda22da794b17e.png)
 
 **Answer** : Star Trek
 
@@ -71,9 +71,9 @@ Email injection is a security vulnerability that allows malicious users to send 
 
 We need to start burp-suite and enable the Burp on browser
 
-![3d67c0e4fe8afc7467306844a477fde2.png](../../_resources/3d67c0e4fe8afc7467306844a477fde2.png)
+![3d67c0e4fe8afc7467306844a477fde2.png]( resources/3d67c0e4fe8afc7467306844a477fde2.png)
 
-![fe1a8089d0fd527c342c1ba12c5ae8ef.png](../../_resources/fe1a8089d0fd527c342c1ba12c5ae8ef.png)
+![fe1a8089d0fd527c342c1ba12c5ae8ef.png]( resources/fe1a8089d0fd527c342c1ba12c5ae8ef.png)
 
 You need to enabled the Burb on browser
 
@@ -81,17 +81,17 @@ You need to enabled the Burb on browser
 
 see the post method.
 
-![491bf0c737954a7d69dbe24779e0b7f4.png](../../_resources/491bf0c737954a7d69dbe24779e0b7f4.png)
+![491bf0c737954a7d69dbe24779e0b7f4.png]( resources/491bf0c737954a7d69dbe24779e0b7f4.png)
 
 Change the email (user) with:  ’ or 1=1 —
 
-![9b7e5b4e1a3c758bf36f106264199ee6.png](../../_resources/9b7e5b4e1a3c758bf36f106264199ee6.png)
+![9b7e5b4e1a3c758bf36f106264199ee6.png]( resources/9b7e5b4e1a3c758bf36f106264199ee6.png)
 
-![0f78290558e415e6d9bbd57465fb863e.png](../../_resources/0f78290558e415e6d9bbd57465fb863e.png)
+![0f78290558e415e6d9bbd57465fb863e.png]( resources/0f78290558e415e6d9bbd57465fb863e.png)
 
 Click forward
 
-![bc6b7f08c3e1782235eaa12e1307c6d6.png](../../_resources/bc6b7f08c3e1782235eaa12e1307c6d6.png)
+![bc6b7f08c3e1782235eaa12e1307c6d6.png]( resources/bc6b7f08c3e1782235eaa12e1307c6d6.png)
 
 **Answer:** 690fa3247a99d651e0b26f947baf0b79b4f404a9
 
@@ -101,19 +101,19 @@ Similar to what we did in Question #1, we will now log into Bender’s account! 
 
 Logout admin account
 
-![670cf3111f406fd3009eafe6a2ff6e76.png](../../_resources/670cf3111f406fd3009eafe6a2ff6e76.png)
+![670cf3111f406fd3009eafe6a2ff6e76.png]( resources/670cf3111f406fd3009eafe6a2ff6e76.png)
 
 Login Bender account
 
-![d16ceedd41838b296df9d95fc560c26f.png](../../_resources/d16ceedd41838b296df9d95fc560c26f.png)
+![d16ceedd41838b296df9d95fc560c26f.png]( resources/d16ceedd41838b296df9d95fc560c26f.png)
 
 make sure Intercept is on and Burp is enable before click login
 
 Click the login and then click the forward
 
-![e56400e11da9eee6bd77bdc65cd80351.png](../../_resources/e56400e11da9eee6bd77bdc65cd80351.png)
+![e56400e11da9eee6bd77bdc65cd80351.png]( resources/e56400e11da9eee6bd77bdc65cd80351.png)
 
-![ac876922f8df5da6b12f1e585b0cc413.png](../../_resources/ac876922f8df5da6b12f1e585b0cc413.png)
+![ac876922f8df5da6b12f1e585b0cc413.png]( resources/ac876922f8df5da6b12f1e585b0cc413.png)
 
 **Answer** :5ff5052e879e6fef64124e64c82c84ebc809c6c4
 
@@ -141,44 +141,44 @@ Select the password and click Add.
 
 Logout he account
 
-![53463743c73116a71cf4c88d42345e5c.png](../../_resources/53463743c73116a71cf4c88d42345e5c.png)
+![53463743c73116a71cf4c88d42345e5c.png]( resources/53463743c73116a71cf4c88d42345e5c.png)
 
-![ffb49193e68bddd3b798599608a983ca.png](../../_resources/ffb49193e68bddd3b798599608a983ca.png)
+![ffb49193e68bddd3b798599608a983ca.png]( resources/ffb49193e68bddd3b798599608a983ca.png)
 
-![e2a5f204ae48bfe5fc222995fd78bd0c.png](../../_resources/e2a5f204ae48bfe5fc222995fd78bd0c.png)
+![e2a5f204ae48bfe5fc222995fd78bd0c.png]( resources/e2a5f204ae48bfe5fc222995fd78bd0c.png)
 
-![59dc45a51d5d4af433e2bf2eb2ada2dc.png](../../_resources/59dc45a51d5d4af433e2bf2eb2ada2dc.png)
+![59dc45a51d5d4af433e2bf2eb2ada2dc.png]( resources/59dc45a51d5d4af433e2bf2eb2ada2dc.png)
 
-![d18f50a2521211cb65139cae5272e573.png](../../_resources/d18f50a2521211cb65139cae5272e573.png)
+![d18f50a2521211cb65139cae5272e573.png]( resources/d18f50a2521211cb65139cae5272e573.png)
 
-![2f247f766273651ec61a3b97d3de16a4.png](../../_resources/2f247f766273651ec61a3b97d3de16a4.png)
+![2f247f766273651ec61a3b97d3de16a4.png]( resources/2f247f766273651ec61a3b97d3de16a4.png)
 
-![02249b5f32bdf448a8321ce7c1eda1cc.png](../../_resources/02249b5f32bdf448a8321ce7c1eda1cc.png)
+![02249b5f32bdf448a8321ce7c1eda1cc.png]( resources/02249b5f32bdf448a8321ce7c1eda1cc.png)
 
 Click the payload  
-![2f68bae7387c98d95271124a8d7351a6.png](../../_resources/2f68bae7387c98d95271124a8d7351a6.png)
+![2f68bae7387c98d95271124a8d7351a6.png]( resources/2f68bae7387c98d95271124a8d7351a6.png)
 
-![825785e0e853328223b7574d159ebbb2.png](../../_resources/825785e0e853328223b7574d159ebbb2.png)
+![825785e0e853328223b7574d159ebbb2.png]( resources/825785e0e853328223b7574d159ebbb2.png)
 
 *You can load the list from:* */usr/share/wordlists/SecLists/Passwords/Common-Credentials/best1050.txt*
 
-*![2df98be33c91e11603108a102e4c468e.png](../../_resources/2df98be33c91e11603108a102e4c468e.png)*
+*![2df98be33c91e11603108a102e4c468e.png]( resources/2df98be33c91e11603108a102e4c468e.png)*
 
 *Start attack*
 
-*![edc8864aafeebd429a2d12e4cc6c41aa.png](../../_resources/edc8864aafeebd429a2d12e4cc6c41aa.png)*
+*![edc8864aafeebd429a2d12e4cc6c41aa.png]( resources/edc8864aafeebd429a2d12e4cc6c41aa.png)*
 
-*![d16827703e01babf601ace322c5e95bb.png](../../_resources/d16827703e01babf601ace322c5e95bb.png)*
+*![d16827703e01babf601ace322c5e95bb.png]( resources/d16827703e01babf601ace322c5e95bb.png)*
 
 Check Status tab and 200 is successful code  
-![cf4a663d8bdca3ec4f1df088bc53ca0f.png](../../_resources/cf4a663d8bdca3ec4f1df088bc53ca0f.png)  
+![cf4a663d8bdca3ec4f1df088bc53ca0f.png]( resources/cf4a663d8bdca3ec4f1df088bc53ca0f.png)  
 \*
 
 Login with admin123
 
-![10114ec6ec275ca267adc6223f952da5.png](../../_resources/10114ec6ec275ca267adc6223f952da5.png)
+![10114ec6ec275ca267adc6223f952da5.png]( resources/10114ec6ec275ca267adc6223f952da5.png)
 
-![52c03bbd0426fb03ea951272482ce3b3.png](../../_resources/52c03bbd0426fb03ea951272482ce3b3.png)
+![52c03bbd0426fb03ea951272482ce3b3.png]( resources/52c03bbd0426fb03ea951272482ce3b3.png)
 
 pass: admin123
 
@@ -196,17 +196,17 @@ You can change it to anything you want!
 
 Click Forgot user password
 
-![fe9353b9e525ce0fc634dcd0cd8948c5.png](../../_resources/fe9353b9e525ce0fc634dcd0cd8948c5.png)
+![fe9353b9e525ce0fc634dcd0cd8948c5.png]( resources/fe9353b9e525ce0fc634dcd0cd8948c5.png)
 
-![bdc0e2fee251b9a8d92c1af13a4d451f.png](../../_resources/bdc0e2fee251b9a8d92c1af13a4d451f.png)
+![bdc0e2fee251b9a8d92c1af13a4d451f.png]( resources/bdc0e2fee251b9a8d92c1af13a4d451f.png)
 
-![b2f74691421d4633c061ed65782f799d.png](../../_resources/b2f74691421d4633c061ed65782f799d.png)
+![b2f74691421d4633c061ed65782f799d.png]( resources/b2f74691421d4633c061ed65782f799d.png)
 
-![bf16bb4d12cabce4dacea1b4a117471b.png](../../_resources/bf16bb4d12cabce4dacea1b4a117471b.png)
+![bf16bb4d12cabce4dacea1b4a117471b.png]( resources/bf16bb4d12cabce4dacea1b4a117471b.png)
 
 Click Change
 
-![3cfa3027f09bef39f59eb351c93143a4.png](../../_resources/3cfa3027f09bef39f59eb351c93143a4.png)
+![3cfa3027f09bef39f59eb351c93143a4.png]( resources/3cfa3027f09bef39f59eb351c93143a4.png)
 
 security question : Samuel
 
@@ -228,21 +228,21 @@ We will download the acquisitions.md and save it. It looks like there are other 
 
 After downloading it, navigate to the home page to receive the flag!
 
-![829e69658c231bc5d045d96b5f8fe1a0.png](../../_resources/829e69658c231bc5d045d96b5f8fe1a0.png)
+![829e69658c231bc5d045d96b5f8fe1a0.png]( resources/829e69658c231bc5d045d96b5f8fe1a0.png)
 
-![ef0528090f2e0382d472887fc636f766.png](../../_resources/ef0528090f2e0382d472887fc636f766.png)
+![ef0528090f2e0382d472887fc636f766.png]( resources/ef0528090f2e0382d472887fc636f766.png)
 
 On URL write /ftp
 
-![850908fe8b62d1a8f5f7145d62914934.png](../../_resources/850908fe8b62d1a8f5f7145d62914934.png)
+![850908fe8b62d1a8f5f7145d62914934.png]( resources/850908fe8b62d1a8f5f7145d62914934.png)
 
-![0506602c304ae0c50d8433428457b531.png](../../_resources/0506602c304ae0c50d8433428457b531.png)
+![0506602c304ae0c50d8433428457b531.png]( resources/0506602c304ae0c50d8433428457b531.png)
 
 Download or save page as acquisitions.md
 
-![0ee00f4468760b12ce27f86bd3012257.png](../../_resources/0ee00f4468760b12ce27f86bd3012257.png)
+![0ee00f4468760b12ce27f86bd3012257.png]( resources/0ee00f4468760b12ce27f86bd3012257.png)
 
-![5292cad51ff9e33afa6d85ceb75f3fce.png](../../_resources/5292cad51ff9e33afa6d85ceb75f3fce.png)
+![5292cad51ff9e33afa6d85ceb75f3fce.png]( resources/5292cad51ff9e33afa6d85ceb75f3fce.png)
 
 **Answer:** 8d2072c6b0a455608ca1a293dc0c9579883fc6a5
 
@@ -254,9 +254,9 @@ He notes that his password is “Mr. Noodles” but he has replaced some “vowe
 
 We now know the password to the **mc.safesearch@juice-sh.op** account is “**Mr. N00dles**”
 
-![fd77bb7451b38dc7256661d50887c51c.png](../../_resources/fd77bb7451b38dc7256661d50887c51c.png)
+![fd77bb7451b38dc7256661d50887c51c.png]( resources/fd77bb7451b38dc7256661d50887c51c.png)
 
-![d9b4d11564a1e6582e3bcccea64a859e.png](../../_resources/d9b4d11564a1e6582e3bcccea64a859e.png)
+![d9b4d11564a1e6582e3bcccea64a859e.png]( resources/d9b4d11564a1e6582e3bcccea64a859e.png)
 
 **Answer:** bb105418e73708ceccf1a7b2491f434b8f5230e4
 
@@ -266,13 +266,13 @@ To get around this, we will use a character bypass called “**Poison Null Byte*
 
 The Poison Null Byte will now look like this: ***%2500***\*.\* Adding this and then a **.md** to the end will Poison Null Byte is actually a **NULL terminator**. By placing a NULL character in the string at a certain byte, the string will tell the server to terminate at that point, nulling the rest of the string.
 
-![6fb083ed569959b7230dd086f6648f31.png](../../_resources/6fb083ed569959b7230dd086f6648f31.png)
+![6fb083ed569959b7230dd086f6648f31.png]( resources/6fb083ed569959b7230dd086f6648f31.png)
 
 http://10.67.191.103/ftp/package.json.bak%2500.md
 
-![2a1ed41471c49d7853191ba58c154b0a.png](../../_resources/2a1ed41471c49d7853191ba58c154b0a.png)
+![2a1ed41471c49d7853191ba58c154b0a.png]( resources/2a1ed41471c49d7853191ba58c154b0a.png)
 
-![7e96dcd8003d6614b4e119bcec2758fe.png](../../_resources/7e96dcd8003d6614b4e119bcec2758fe.png)
+![7e96dcd8003d6614b4e119bcec2758fe.png]( resources/7e96dcd8003d6614b4e119bcec2758fe.png)
 
 **Answer:** cfdeea14e8f01b4952722fd0e4a77f1928593c9a
 
@@ -291,17 +291,17 @@ Occurs when a user can perform an action or access data of another user with a *
 
 We are then going to refresh the page and look for a javascript file for **main-es2015.js**
 
-![4af17e29ba8f6f9bdcc2c0a003e33deb.png](../../_resources/4af17e29ba8f6f9bdcc2c0a003e33deb.png)
+![4af17e29ba8f6f9bdcc2c0a003e33deb.png]( resources/4af17e29ba8f6f9bdcc2c0a003e33deb.png)
 
-![70770c915ab629a0d218e61110c9f018.png](../../_resources/70770c915ab629a0d218e61110c9f018.png)
+![70770c915ab629a0d218e61110c9f018.png]( resources/70770c915ab629a0d218e61110c9f018.png)
 
 Search Administrator
 
-![d10fd3a78cadd05268328d997ce2d66b.png](../../_resources/d10fd3a78cadd05268328d997ce2d66b.png)
+![d10fd3a78cadd05268328d997ce2d66b.png]( resources/d10fd3a78cadd05268328d997ce2d66b.png)
 
 Logout and login in to Admin account
 
-![17c7b16e697a6de4a0ec29e307f662b7.png](../../_resources/17c7b16e697a6de4a0ec29e307f662b7.png)
+![17c7b16e697a6de4a0ec29e307f662b7.png]( resources/17c7b16e697a6de4a0ec29e307f662b7.png)
 
 This hints towards a page called “/#/administration” as can be seen by the about path a couple lines below, but going there while not logged in doesn’t work.
 
@@ -311,11 +311,11 @@ A good way to stop users from accessing this is to only load parts of the applic
 
 change to search tro administration
 
-![87d2d2c82f84352164f95b5b06190a6b.png](../../_resources/87d2d2c82f84352164f95b5b06190a6b.png)
+![87d2d2c82f84352164f95b5b06190a6b.png]( resources/87d2d2c82f84352164f95b5b06190a6b.png)
 
-![ea4f317e0ce399f4a325cba67e23a6f6.png](../../_resources/ea4f317e0ce399f4a325cba67e23a6f6.png)
+![ea4f317e0ce399f4a325cba67e23a6f6.png]( resources/ea4f317e0ce399f4a325cba67e23a6f6.png)
 
-![8fec469ea623920ad35b263b15655f33.png](../../_resources/8fec469ea623920ad35b263b15655f33.png)
+![8fec469ea623920ad35b263b15655f33.png]( resources/8fec469ea623920ad35b263b15655f33.png)
 
 **Answer:** 71aeb3b0bf01cc6e488f0207bb62f79b41454a87
 
@@ -323,25 +323,25 @@ change to search tro administration
 
 Login to the Admin account and click on ‘Your Basket’. Make sure Burp is running so you can capture the request!
 
-![f093b6b57882c940783f15ad08eb34e8.png](../../_resources/f093b6b57882c940783f15ad08eb34e8.png)
+![f093b6b57882c940783f15ad08eb34e8.png]( resources/f093b6b57882c940783f15ad08eb34e8.png)
 
 Make sure intercept is on and Burp enable  
-![191ee4abde411a5759ba8cb1517edd0f.png](../../_resources/191ee4abde411a5759ba8cb1517edd0f.png)
+![191ee4abde411a5759ba8cb1517edd0f.png]( resources/191ee4abde411a5759ba8cb1517edd0f.png)
 
 click basket  
-![3d43ec092eec4c60395613a3995b8eca.png](../../_resources/3d43ec092eec4c60395613a3995b8eca.png)
+![3d43ec092eec4c60395613a3995b8eca.png]( resources/3d43ec092eec4c60395613a3995b8eca.png)
 
-![250e7efee2774d036e0ea984b6403c8b.png](../../_resources/250e7efee2774d036e0ea984b6403c8b.png)
+![250e7efee2774d036e0ea984b6403c8b.png]( resources/250e7efee2774d036e0ea984b6403c8b.png)
 
 Forward each request until you see: *GET /rest/basket/1 HTTP/1.1*
 
 Now, we are going to change the number 1 after /basket/ to 2
 
-![a1a86272130a8c09399f461910397ecd.png](../../_resources/a1a86272130a8c09399f461910397ecd.png)
+![a1a86272130a8c09399f461910397ecd.png]( resources/a1a86272130a8c09399f461910397ecd.png)
 
 Click Forward
 
-![e13d49f8f52ef0c451e55e6e274a21d4.png](../../_resources/e13d49f8f52ef0c451e55e6e274a21d4.png)
+![e13d49f8f52ef0c451e55e6e274a21d4.png]( resources/e13d49f8f52ef0c451e55e6e274a21d4.png)
 
 **Answer:** e6982b34b6734ceadd28e5019b251f929a80b815
 
@@ -351,15 +351,15 @@ Navigate to the http://machine_ip/#/administration page again and click the **bi
 
 Disable to Burp and Intercept
 
-![4389510080111c64641a50017552e022.png](../../_resources/4389510080111c64641a50017552e022.png)
+![4389510080111c64641a50017552e022.png]( resources/4389510080111c64641a50017552e022.png)
 
 Cnage the administration
 
-![4ea2f9ba883156d77275abbc2dec0c8c.png](../../_resources/4ea2f9ba883156d77275abbc2dec0c8c.png)
+![4ea2f9ba883156d77275abbc2dec0c8c.png]( resources/4ea2f9ba883156d77275abbc2dec0c8c.png)
 
-![e8b9655e2c2c66ca5461974375347081.png](../../_resources/e8b9655e2c2c66ca5461974375347081.png)
+![e8b9655e2c2c66ca5461974375347081.png]( resources/e8b9655e2c2c66ca5461974375347081.png)
 
-![443ba6eb5642b2d93001acecd85c6f39.png](../../_resources/443ba6eb5642b2d93001acecd85c6f39.png)
+![443ba6eb5642b2d93001acecd85c6f39.png]( resources/443ba6eb5642b2d93001acecd85c6f39.png)
 
 **Answer:** 78231b75c0b2180b7e964dcbb1ab3c3f58639f2e
 
@@ -384,9 +384,9 @@ We will be using the iframe element with a javascript alert tag:
 
 Inputting this into the **search bar** will trigger the alert.
 
-![ffb65714b572bd73ce3a35601558d0e6.png](../../_resources/ffb65714b572bd73ce3a35601558d0e6.png)
+![ffb65714b572bd73ce3a35601558d0e6.png]( resources/ffb65714b572bd73ce3a35601558d0e6.png)
 
-![7cb606dbda6f50feead085302eae4c8b.png](../../_resources/7cb606dbda6f50feead085302eae4c8b.png)
+![7cb606dbda6f50feead085302eae4c8b.png]( resources/7cb606dbda6f50feead085302eae4c8b.png)
 
 **Answer:** 4a31a4fe0954199566e360a873802bf64d0d0a84
 
@@ -398,56 +398,56 @@ We are going to navigate to the “**Last Login IP**” page for this attack.
 
 Make sure that Burp **intercept is on**, so it will catch the logout request.
 
-![0a24ba41cfe609293ebea820ddbcfdda.png](../../_resources/0a24ba41cfe609293ebea820ddbcfdda.png)
+![0a24ba41cfe609293ebea820ddbcfdda.png]( resources/0a24ba41cfe609293ebea820ddbcfdda.png)
 
-![4775bd028e823641fbfd71dc24ab5717.png](../../_resources/4775bd028e823641fbfd71dc24ab5717.png)
+![4775bd028e823641fbfd71dc24ab5717.png]( resources/4775bd028e823641fbfd71dc24ab5717.png)
 
 Enabled the Burp  
-**![5407890edfd0e09b856e6bcdbc3c98c6.png](../../_resources/5407890edfd0e09b856e6bcdbc3c98c6.png)**
+**![5407890edfd0e09b856e6bcdbc3c98c6.png]( resources/5407890edfd0e09b856e6bcdbc3c98c6.png)**
 
 Logout he admin account  
-![9d83daf91093746c0c4962d856331458.png](../../_resources/9d83daf91093746c0c4962d856331458.png)
+![9d83daf91093746c0c4962d856331458.png]( resources/9d83daf91093746c0c4962d856331458.png)
 
 Add the header
 
-![c0be14a345356bba044af5bf123c56ac.png](../../_resources/c0be14a345356bba044af5bf123c56ac.png)
+![c0be14a345356bba044af5bf123c56ac.png]( resources/c0be14a345356bba044af5bf123c56ac.png)
 
 We will then head over to the Headers tab where we will add a new header:
 
 Click forward
 
-![7b9dd27c01ec2ee0b4bb0bdda24c3212.png](../../_resources/7b9dd27c01ec2ee0b4bb0bdda24c3212.png)
+![7b9dd27c01ec2ee0b4bb0bdda24c3212.png]( resources/7b9dd27c01ec2ee0b4bb0bdda24c3212.png)
 
 **Answer:** c37da14686b69a220fd9febd09bb9593e7d0539f
 
 **Question #3: Perform a reflected XSS!**
 
 Disabl;ed the Burp\[ and OIntercept  
-![8e158c691ff4ee77b796c57be18df3cd.png](../../_resources/8e158c691ff4ee77b796c57be18df3cd.png)
+![8e158c691ff4ee77b796c57be18df3cd.png]( resources/8e158c691ff4ee77b796c57be18df3cd.png)
 
 First, we are going to need to be on the right page to perform the reflected XSS!
 
 **Login** into the **admin account** and navigate to the ‘**Order History**
 
-**![77e302b781518ee919a126fdf7051f72.png](../../_resources/77e302b781518ee919a126fdf7051f72.png)**
+**![77e302b781518ee919a126fdf7051f72.png]( resources/77e302b781518ee919a126fdf7051f72.png)**
 
 From there you will see a “**Truck**” icon, clicking on that will bring you to the track result page. You will also see that there is an id paired with the order.
 
-![729d6d0f4a48efbb67246823832315af.png](../../_resources/729d6d0f4a48efbb67246823832315af.png)
+![729d6d0f4a48efbb67246823832315af.png]( resources/729d6d0f4a48efbb67246823832315af.png)
 
-![8fc618714de330c06a292a34e8271c39.png](../../_resources/8fc618714de330c06a292a34e8271c39.png)
+![8fc618714de330c06a292a34e8271c39.png]( resources/8fc618714de330c06a292a34e8271c39.png)
 
-![6d0c7d78d3be092f460cc5731503e7a9.png](../../_resources/6d0c7d78d3be092f460cc5731503e7a9.png)
+![6d0c7d78d3be092f460cc5731503e7a9.png]( resources/6d0c7d78d3be092f460cc5731503e7a9.png)
 
-![c1ebc93144555d837767c535ef5cd7ec.png](../../_resources/c1ebc93144555d837767c535ef5cd7ec.png)
+![c1ebc93144555d837767c535ef5cd7ec.png]( resources/c1ebc93144555d837767c535ef5cd7ec.png)
 
-![c16ff45ab86d852f5740b4ad725ce95a.png](../../_resources/c16ff45ab86d852f5740b4ad725ce95a.png)
+![c16ff45ab86d852f5740b4ad725ce95a.png]( resources/c16ff45ab86d852f5740b4ad725ce95a.png)
 
 Update the url
 
-![5b36a1fbae224af7a518e40127709c0b.png](../../_resources/5b36a1fbae224af7a518e40127709c0b.png)
+![5b36a1fbae224af7a518e40127709c0b.png]( resources/5b36a1fbae224af7a518e40127709c0b.png)
 
-![47a1e61d783679ed24e8c97184371f8e.png](../../_resources/47a1e61d783679ed24e8c97184371f8e.png)
+![47a1e61d783679ed24e8c97184371f8e.png]( resources/47a1e61d783679ed24e8c97184371f8e.png)
 
 **Answer:** 305021787d3e9cd9cebc057a021c2504550bb3b6
 
@@ -457,6 +457,6 @@ If you wish to tackle some of the **harder** challenges that were not covered wi
 
 **Access the → /#/score-board/ page**
 
-![f318c9e1ace1cb15c2ef43aef1604528.png](../../_resources/f318c9e1ace1cb15c2ef43aef1604528.png)
+![f318c9e1ace1cb15c2ef43aef1604528.png]( resources/f318c9e1ace1cb15c2ef43aef1604528.png)
 
 **Answer:** 2614339936e8282e2f820f023d4d998a1f95e02a
