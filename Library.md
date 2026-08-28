@@ -2,15 +2,15 @@ https://tryhackme.com/r/room/bsidesgtlibrary
 
 Objectives:
 
-1==> Understanding of SSH and Brute forcing
+1==> Understanding of SSH and brute-forcing
 
-2==> Using Python for privilege Escalation to play around with low-privileged user role.
+2==> Using Python for privilege Escalation to play around with a low-privileged user role.
 
 **Enumeration - Reconnaissance**
 
 nmap  -p- -sC -sV (IP) -vvv -oA nmap_full ​
 
-We find 2 open ports one is 22 ssh and other one is 80 http that means a **webpage running** on port 80.
+We find 2 open ports; one is 22 ssh and other one is 80 http that means a **webpage is running** on port 80.
 
 ![4d4c8c9c4c87737e5d87a8ee49662a33.png]( resources/4d4c8c9c4c87737e5d87a8ee49662a33.png)
 
@@ -20,13 +20,12 @@ We find 2 open ports one is 22 ssh and other one is 80 http that means a **webpa
 
 ![616dba04516e250122e735ac594c6cf7.png]( resources/616dba04516e250122e735ac594c6cf7.png)
 
-&nbsp;
 
-Lets check out the http webpage
+Let's check out the HTTP webpage
 
 ![c03896e5634bbdd24586995bdc55311a.png]( resources/c03896e5634bbdd24586995bdc55311a.png)
 
-We find the user --> Meliodas and we can do brute force to find password for this user and can access he/she account
+We find the user --> Meliodas, and we can do brute force to find the password for this user and can access he/she account
 
 Robots.txt --> https://tryhackme.com/r/room/contentdiscovery
 
@@ -38,19 +37,19 @@ hydra -l meliodas -P /root/Desktop/wordlists/rockyou.txt ssh://10.10.36.165
 
 ![00906a0f7481f6bf0bef14080911fd51.png]( resources/00906a0f7481f6bf0bef14080911fd51.png)
 
-We find the password for user meliodas is iloveyou1, now we can login with this user credentials
+We find the password for user meliodas is iloveyou1; now we can log in with these user credentials
 
 ssh meliodas@10.10.36.165
 
 ![5a6fe504d6e9c6d8c00d7cf3a9b4ac7b.png]( resources/5a6fe504d6e9c6d8c00d7cf3a9b4ac7b.png)
 
-Lets find the user.txt with looking around and found the first flag i.e. user.txt.
+Let's find the user.txt by looking around and found the first flag, i.e., user.txt.
 
 ![9267035770887f184fee6b92ec568984.png]( resources/9267035770887f184fee6b92ec568984.png)
 
 cat
 
-We got the user flag and completed the first part of our task which was to get the user flag.
+We got the user flag and completed the first part of our task, which was to get the user flag.
 
 ![0d4e4360bbdf093c3d8175360997dcc4.png]( resources/0d4e4360bbdf093c3d8175360997dcc4.png)
 
@@ -58,7 +57,7 @@ We got the user flag and completed the first part of our task which was to get t
 
 # **Privilege escalation**
 
-Checking for the permission we have.
+Checking the permissions we have.
 
 find / -type f -name root.txt
 
@@ -82,21 +81,20 @@ find / -type f -name root.txt
 >     4.  **`/usr/bin/python*`**:
 >         
 >         - This allows `meliodas` to run any version or variant of the `python` executable located in `/usr/bin/` with `sudo`. The `*` is a wildcard, meaning it matches any files that start with `python` (like `python`, `python3`, `python2.7`, etc.).
->     5.  **`/home/meliodas/bak.py`**:
->         
->         - This specifies that `meliodas` can run the script `/home/meliodas/bak.py` with `sudo` without being prompted for a password.
+  5.  **`/home/meliodas/bak.py`**:
+        
+ - This specifies that `meliodas` can run the script `/home/meliodas/bak.py` with `sudo` without being prompted for a password.
 
-<img alt="" class="bh ln ns c jop-noMdConv" width="519" height="121" loading="lazy" role="presentation" src=" resources/1_pfwH_xLDVGF0eEAJgw8uZQ.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 519px; max-width: 100%; height: auto;">
 
 This command would run the `bak.py` script using Python 3 with elevated privileges, without requiring `meliodas` to enter their password.
 
-We see that user meliodas can run a file called bak.py using python, but when I tried to run it, it gave an error and said permission was denied.
+We see that user meliodas can run a file called bak.py using Python, but when I tried to run it, it gave an error and said permission was denied.
 
 ![3ebdfa9508921290038f7e587803c0de.png]( resources/3ebdfa9508921290038f7e587803c0de.png)
 
 ![cb3279326f2d7a0093fc735b05e3b81e.png]( resources/cb3279326f2d7a0093fc735b05e3b81e.png)
 
-So, I deleted the file & re-create it with spawn using python. And then ran that bak.py again which gave me **root privileges.**
+So, I deleted the file & re-create it with spawn using Python. And then ran that bak.py again, which gave me **root privileges.**
 
 **"spawn" generally refers to the creation or execution of a new process** or **task**
 
@@ -116,13 +114,10 @@ How it Works
 
 This command is powerful, especially in the context of security and remote administration, but it should be used with caution and only in environments where you have the appropriate permissions.
 
-<img alt="" class="bh ln ns c jop-noMdConv" width="700" height="150" loading="lazy" role="presentation" src=" resources/1_ONlELxHaI0czSJsYmhgI7w.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;"><img alt="" class="bh ln ns c jop-noMdConv" width="700" height="103" loading="lazy" role="presentation" src=" resources/1_8mfDdmjxO0FRiMTJlMuNKg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 680px; max-width: 100%; height: auto;">
-
 ![83f85d0f730b53d8b3d6e65a04e46be5.png]( resources/83f85d0f730b53d8b3d6e65a04e46be5.png)
 
 Now we will find the root flag.
 
-<img alt="" class="bh ln ns c jop-noMdConv" width="517" height="331" loading="lazy" role="presentation" src=" resources/1_81Hy-dbSITyUTH6RDfkmEg.png" style="box-sizing: inherit; vertical-align: middle; background-color: #ffffff; width: 517px; max-width: 100%; height: auto;">
 
 second way   
 use os.system
